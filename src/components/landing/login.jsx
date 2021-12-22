@@ -1,6 +1,7 @@
 import React from 'react';
 import './landing.css';
 import { InputGroup, Input, Button, Media, ButtonGroup, Carousel, CarouselIndicators, CarouselItem, CarouselCaption, CarouselControl, UncontrolledCarousel } from 'reactstrap';
+import foto5 from '../../images/foto5.gif';
 
 export default function Login(){
     return(
@@ -12,7 +13,7 @@ export default function Login(){
                         <Media
                             object
                             src=
-                            "https://lh3.googleusercontent.com/proxy/OEYcr4jKbDn34wgRW6bSJtFmXhKEzhF5jQ7xYdZlmbBDVFsHsnFvGcHgTU9UkUkdMnAolq2Dwy9_x6_nb9MbXktJlZ5VC8d1oUVGuCS-20gXcLzBYYNLXsQ5n7jORPwI7fNHWiChRMnn3V13Ster5JfSHA"
+                            {foto5}
                             alt="cat"
                         />
                     </Media>
@@ -30,7 +31,7 @@ export default function Login(){
                     <ButtonGroup>
                         <div className="boton">
                             <Button
-                                color="success"
+                                color="primary"
                                 outline
                             >
                                 Iniciar sesión
@@ -39,6 +40,7 @@ export default function Login(){
                         <br />
                         <div className="boton1">
                             <Button
+                            color='primary'
                                 outline
                             >
                                 Registrarme

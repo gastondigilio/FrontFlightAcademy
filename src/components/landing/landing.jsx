@@ -2,6 +2,10 @@ import './landing.css'
 import React from 'react';
 import { InputGroup, Input, Button, Media, ButtonGroup, Carousel, CarouselIndicators, CarouselItem, CarouselCaption, CarouselControl, UncontrolledCarousel } from 'reactstrap';
 import Login from './login';
+import fotoModificada1 from '../../images/fotoModificada1.png';
+import foto2 from '../../images/foto2.png';
+import foto3 from '../../images/foto3.png';
+import foto4 from '../../images/foto4.png';
 
 export default function Landing() {
     return (
@@ -10,25 +14,31 @@ export default function Landing() {
                 {/* <div className="probando"> */}
                 <Login />
                 {/* </div> */}
+                <div className="images">
                 <UncontrolledCarousel
                     items={[
                         {
                             
                             key: 1,
-                            src: 'https://picsum.photos/id/123/1200/600'
+                            src: fotoModificada1
                         },
                         {
                             
                             key: 2,
-                            src: 'https://picsum.photos/id/456/1200/600'
+                            src: foto2
                         },
                         {
                             
                             key: 3,
-                            src: 'https://picsum.photos/id/678/1200/600'
+                            src: foto3
+                        },
+                        { 
+                            key: 4,
+                            src: foto4
                         }
                     ]}
                 />
+                </div>
             {/* <div className="contenedorTitulo">
                 <h4>Estoy volando...</h4>
             </div> */}

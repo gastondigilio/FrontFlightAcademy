@@ -1,0 +1,30 @@
+.navContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+}
+
+.navBoton{
+    height: 10%;
+    width: 19%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    /* color: white; */
+}
+
+.navLink{
+    color: white;
+}
+
+.navName{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+     width: 70%;
+}
+
+.navImagen{
+    width: 8%;
+}

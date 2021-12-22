@@ -1,6 +1,7 @@
 import "./navBar.css";
 import React from "react";
-import {Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Nav, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText} from 'reactstrap'
+import { Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Nav, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText } from 'reactstrap';
+import foto2 from '../../images/foto2.png'
 
 export default function NavBar() {
 
@@ -8,59 +9,30 @@ export default function NavBar() {
         <div>
             <Navbar
                 color="dark"
-                container
+                container="fluid"
                 dark
                 expand="lg"
                 fixed="top"
                 light
+                className="navContainer"
             >
+                <div className="navName">
+                <img className="navImagen" src={foto2} />
                 <NavbarBrand href="/">
-                    reactstrap
+                    Flight academy
                 </NavbarBrand>
+                </div>
                 <NavbarToggler onClick={function noRefCheck() { }} />
-                <Collapse navbar>
-                    <Nav
-                        className="me-auto"
-                        navbar
-                    >
-                        <NavItem>
-                            <NavLink href="/components/">
-                                Components
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">
-                                GitHub
-                            </NavLink>
-                        </NavItem>
-                        <UncontrolledDropdown
-                            inNavbar
-                            nav
-                        >
-                            <DropdownToggle
-                                caret
-                                nav
-                            >
-                                Options
-                            </DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>
-                                    Option 1
-                                </DropdownItem>
-                                <DropdownItem>
-                                    Option 2
-                                </DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem>
-                                    Reset
-                                </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
-                    </Nav>
-                    <NavbarText>
-                        Simple Text
-                    </NavbarText>
+                <div className="navBoton">
+                <Collapse navbar container="fluid">
+                <NavbarBrand href="/">
+                    Usuario logueado
+                </NavbarBrand>
+                <NavbarBrand href="/">
+                    Cerrar Sesión
+                </NavbarBrand>
                 </Collapse>
+                </div>
             </Navbar>
         </div>
     )
