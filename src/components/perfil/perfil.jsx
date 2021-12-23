@@ -6,7 +6,7 @@ import "./perfil.css";
 
 
 export default function Perfil() {
-console.log(holaaaaaa)
+console.log(holaaaaaaaaaaaaaaaaaaaaaa)
     return (
         
 
