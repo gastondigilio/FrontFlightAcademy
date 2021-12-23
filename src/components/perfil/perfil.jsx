@@ -6,7 +6,7 @@ import "./perfil.css";
 
 
 export default function Perfil() {
-
+console.log(hola)
     return (
         
 
@@ -16,7 +16,7 @@ export default function Perfil() {
             <div className="navBar">
             
             </div>
-            <h4>asdasdasdas</h4>
+            <h4>asdasdasasdasdasdas</h4>
             <div className="NavVertical">
             <NavBarVertical />
             </div>
