@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/home/home";
 import Landing from "./components/landing/landing";
+import Perfil from "./components/perfil/perfil";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,6 +13,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Landing} />
           <Route exact path="/home" component={Home} />
+          <Route exact path="/perfil" component={Perfil} /> 
 
           {/* <Route path="/home" components={{main: Home, sidebar: Navbar}} /> */}
           {/* <Route exact path='/home' component={Navbar} /> */}
