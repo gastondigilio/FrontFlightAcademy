@@ -14,7 +14,7 @@ export default function Landing() {
                 {/* <div className="probando"> */}
                 <Login />
                 {/* </div> */}
-                <div className="images">
+                {/* <div className="images">
                 <UncontrolledCarousel
                     items={[
                         {
@@ -38,7 +38,7 @@ export default function Landing() {
                         }
                     ]}
                 />
-                </div>
+                </div> */}
             {/* <div className="contenedorTitulo">
                 <h4>Estoy volando...</h4>
             </div> */}

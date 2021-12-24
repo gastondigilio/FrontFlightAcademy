@@ -1,5 +1,9 @@
 .contenedor{
-    margin-top: 70px;
+    margin-top: 80px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
 }
 
 .navBarVerticalContainer{
@@ -8,5 +12,40 @@
     /* border: 5px solid blue; */
     width: 17%;
     height: 89%;
-    /* asd */
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: minmax(1fr);
+    grid-gap: 5px;
+    border: 5px solid orange;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.containerGrid1{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+.containerGrid2{
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+.containerGrid3{
+    border: 1px solid blue;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+.containerGrid4{
+    border: 1px solid green;
+    border-radius: 10px;
+    margin-left: 100px;
+
 }
