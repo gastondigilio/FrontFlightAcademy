@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/home/home";
-import Landing from "./components/landing/landing";
+import Login from "./components/landing/login";
 import Perfil from "./components/perfil/perfil";
+import Register from "./components/register/register";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,9 +12,10 @@ function App() {
     <BrowserRouter>
       <div className='App'>
         <Switch>
-          <Route exact path='/' component={Landing} />
+          <Route exact path='/' component={Login} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/perfil" component={Perfil} /> 
+          <Route exact path="/register" component={Register} />
 
           {/* <Route path="/home" components={{main: Home, sidebar: Navbar}} /> */}
           {/* <Route exact path='/home' component={Navbar} /> */}
