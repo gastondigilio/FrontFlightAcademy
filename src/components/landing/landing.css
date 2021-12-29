@@ -83,6 +83,30 @@
     z-index: 1;
     position: absolute;
 }
+
+.imagenLanding{
+    width: 30%;
+    height: 50%;
+    border-radius: 15px;
+}
+
+.cursosGrid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.containerCursosGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-auto-columns: minmax(1fr);
+    grid-template-rows: 1fr 1fr ;
+    grid-gap: 10px;
+    width: 80%;
+    align-items: center;
+}
 /* 
 .prueba{
     position: relative;
