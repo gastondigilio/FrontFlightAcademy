@@ -1,0 +1,10 @@
+.chart{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.probando{
+    display: flex;
+    flex-direction: column;
+}

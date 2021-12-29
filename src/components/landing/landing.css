@@ -68,3 +68,23 @@
     padding-right: 50px
     /* float: right; */
 }
+
+.btnLogIn:hover{
+    text-decoration: underline
+}
+
+.logInContainer{
+    position: absolute;
+    z-index: 2;
+    /* top: 0 */
+}
+
+.carousel{
+    z-index: 1;
+    position: absolute;
+}
+/* 
+.prueba{
+    position: relative;
+    z-index: 1;
+} */
