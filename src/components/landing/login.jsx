@@ -68,6 +68,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import foto4 from '../../images/foto4.png';
 import foto5 from '../../images/foto5.gif';
+import foto6 from '../../images/foto6.png';
 import Register from '../register/register'
 import './landing.css';
 
@@ -129,7 +130,7 @@ export default function SignInSide() {
           >
             <Avatar sx={{ m: 1 }}>
               {/* <LockOutlinedIcon /> */}
-              <img src={foto5} /> 
+              <img src={foto6} /> 
               {/* Foto avatar usuarios */}
             </Avatar>
             <Typography component="h1" variant="h5">
