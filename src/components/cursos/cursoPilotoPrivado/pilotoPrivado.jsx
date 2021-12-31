@@ -1,7 +1,8 @@
 import './pilotoPrivado.css';
 import React from 'react';
 import NavBar from '../../navBar/navBar';
-import { InputGroup, Input, Button, Media, ButtonGroup, Carousel, CarouselIndicators, CarouselItem, CarouselCaption, CarouselControl, UncontrolledCarousel, Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+import {Link} from 'react-router-dom';
 
 export default function PilotoPrivado() {
     return (
@@ -13,7 +14,7 @@ export default function PilotoPrivado() {
                     >
                         <CardBody>
                             <CardTitle tag="h5">
-                                Piloto privado de avión con VFR controlado
+                                Piloto Privado de Avión con VFR controlado
                             </CardTitle>
                             <CardText className="cardText">
                                 El curso de Piloto Privado de avión es el primer paso en tu carrera aeronáutica. Esta licencia te habilitará para hacer vuelos visuales con referencia al terreno, es decir vuelo VFR (Visual Flight Rules), utilizando los instrumentos de vuelo sólo como ayuda complementaria. Esta licencia no te habilitará para hacer vuelos por instrumentos. La licencia de piloto privado de avión con VFR controlado te permitirá volar aviones monomotores de hasta 5700 Kg de peso máximo de despegue. Con esta licencia podrás realizar vuelos deportivos, vuelos de travesía o llevar pasajeros pero no de forma comercial.
@@ -38,6 +39,7 @@ export default function PilotoPrivado() {
                             </CardSubtitle>
                             <CardText className="cardText">
                                 El Curso de Piloto Privado está conformado por 8 clases teóricas de 4hs c/u, y una curricula que abarca diferentes temáticas, como por ejemplo principios aerodinámicos, tipos de motores e instrumentos de vuelo y motor, atmósfera, servicios meteorológicos, clasificación de los espacios aéreos, circuitos de tránsito, alfabeto aeronáutico, lectura y comprensión de los equipos, cartas visuales e instrumentales, planificación y ejecución de travesías, etc.
+                            </CardText>
                             <CardText className="cardText">
                                 <p>La estructura curricular del curso posee las siguientes asignaturas:</p>
                                 <ul>
@@ -50,7 +52,6 @@ export default function PilotoPrivado() {
                                     <li>Radioeléctrica</li>
                                     <li>Navegación</li>
                                 </ul>
-                                </CardText>
                             </CardText>
                             <CardSubtitle
                                 className="mb-2 text-muted"
@@ -101,6 +102,8 @@ export default function PilotoPrivado() {
                                     <li>Certificado médico aeronáutico de Argentina Clase II (psicofísico). Los extranjeros deben realizarlo en Argentina, ya que el certificado médico de su país no será válido en Argentina.</li>
                                     <li>Foto 4cm x 4cm de frente con fondo azul.</li>
                                     <li>Certificado analítico de estudios primarios o secundarios. Los alumnos extranjeros deben tenerlo legalizado por el ministerio de educación y apostillado por el ministerio de relaciones exteriores (Apostilla de la Haya).</li>
+                                    <li>Comprobante de derecho de examen.</li>
+                                    <li>Comprobante de pago.</li>
                                 </ul>
                             </CardText>
                         </CardBody>
@@ -110,7 +113,7 @@ export default function PilotoPrivado() {
             <div className="containerPilotoPrivado">
                 <div className="cardPPA4">
                     <Card
-                    color="light"
+                        color="light"
                     >
                         <CardBody>
                             <CardTitle tag="h5">
@@ -127,6 +130,11 @@ export default function PilotoPrivado() {
                     </Card>
                 </div>
             </div>
+            <Link to="/cursos">
+            <button className='botonVolverCursos'>
+                Volver
+            </button>
+            </Link>
         </div>
     )
 }
