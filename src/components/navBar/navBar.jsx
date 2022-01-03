@@ -20,23 +20,26 @@ export default function NavBar() {
                 <div className="navName">
                 <img className="navImagen" src={foto2} />
                 <NavbarBrand href="/">
-                    Flight academy
+                    Flights academy
                 </NavbarBrand>
                 </div>
                 <NavbarToggler onClick={function noRefCheck() { }} />
                 <div className="navBoton">
                 <Collapse navbar container="fluid">
                 <NavbarBrand href="/cursos">
+                    Sobre nosotros
+                </NavbarBrand>
+                <NavbarBrand href="/cursos">
                     Cursos
+                </NavbarBrand>
+                <NavbarBrand href="/estudiantes">
+                    Estudiantes
                 </NavbarBrand>
                 <NavbarBrand href="/">
                     Galería
                 </NavbarBrand>
                 <NavbarBrand href="/login">
                     Turnos
-                </NavbarBrand>
-                <NavbarBrand href="/">
-                    Contacto
                 </NavbarBrand>
                 </Collapse>
                 </div>
