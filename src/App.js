@@ -10,6 +10,7 @@ import PilotoPrivado from './components/cursos/cursoPilotoPrivado/pilotoPrivado'
 import PilotoComercial from './components/cursos/cursoPilotoComercial/pilotoComercial';
 import PilotoComercialPrimera from './components/cursos/cursoPilotoComercialPrimera/pilotoComercialPrimera';
 import InstructorVuelo from './components/cursos/cursoInstructorVuelo/instructorVuelo';
+import Estudiantes from './components/Estudiantes/estudiantes';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -26,6 +27,7 @@ function App() {
           <Route exact path='/cursos/pilotocomercial' component={PilotoComercial} />
           <Route exact path='/cursos/pilotocomercialprimeraclase' component={PilotoComercialPrimera} />
           <Route exact path='/cursos/instructorvuelo' component={InstructorVuelo} />
+          <Route exact path='/estudiantes' component={Estudiantes} />
           <Route exact path="/perfil" component={Perfil} /> 
           <Route exact path="/register" component={Register} />
 

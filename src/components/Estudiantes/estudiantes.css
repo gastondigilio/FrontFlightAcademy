@@ -1,0 +1,41 @@
+/* .estudiantesDiv{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2%
+} */
+
+.estudiantesContainer{
+    display: flex;
+    flex-direction: row;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+}
+
+.estudiantes{
+    display: flex;
+    flex-direction: column;
+    padding-right: 8%;
+    margin-top: 6%;
+}   
+
+.estudiantes1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 18%;
+}
+
+.estudiantes2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+}
+
+.estudiantes3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 30%;
+}

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
+import Footer from '../footer/footer';
 
 export default function Cursos() {
     return (
@@ -143,6 +144,7 @@ export default function Cursos() {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     height: 300,
+                                    backgroundColor: 'rgba(8, 38, 46, 0.247)',
                                 }}
                             >
                                 <h4>Curso Piloto Privado de Avión</h4>
@@ -192,7 +194,7 @@ export default function Cursos() {
                                 }}
                             >
                                 <h4>Curso Piloto Comercial de Primera Clase de Avión</h4>
-                                                            {/* <img alt='k' className='img' src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" /> */}
+                                {/* <img alt='k' className='img' src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" /> */}
                                 <p className='detailSummary'>La Licencia te habilita como piloto de vuelos comerciales en aeronaves de hasta 20.000 kgs.</p>
                                 <Button href="/cursos/pilotocomercialprimeraclase" className="btn6">
                                     Más info
@@ -231,6 +233,7 @@ export default function Cursos() {
                     Volver
                 </button>
             </Link>
+            <Footer />
         </div>
     )
 }
