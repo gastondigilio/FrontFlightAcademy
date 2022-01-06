@@ -26,7 +26,7 @@ export default function NavBar() {
                 <NavbarToggler onClick={function noRefCheck() { }} />
                 <div className="navBoton">
                 <Collapse navbar container="fluid">
-                <NavbarBrand href="/cursos">
+                <NavbarBrand href="/sobrenosotros">
                     Sobre nosotros
                 </NavbarBrand>
                 <NavbarBrand href="/cursos">

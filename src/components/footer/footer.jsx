@@ -5,6 +5,9 @@ import Link from "@mui/material/Link";
 import "./footer.css";
 import WhatsappIcon from '../../images/WhatsappIcon.png';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import InstagramIcon from '../../images/InstagramIcon.png';
+import FacebookIcon from '../../images/FacebookIcon.png';
+import TwitterIcon from '../../images/TwitterIcon.png';
 
 export default function Footer() {
     return (
@@ -23,12 +26,14 @@ export default function Footer() {
                                 <div className='footerTitle'>
                                     <Box>Flight Academy</Box>
                                 </div>
-                                <Box mt={2} sm={10}>
-                                    Escuela de Vuelo y servicios aéreos, Aeródromo de Morón (SADM / MOR), Buenos Aires, Argentina.
-                                </Box>
-                                <Box mt={4}>
-                                    Centro de Instrucción y Entrenamiento (CIAC) Tipo 3 certificado por ANAC.
-                                </Box>
+                                <div className='footerName'>
+                                    <Box mt={2} sm={10}>
+                                        Escuela de Vuelo y servicios aéreos, Aeródromo de Morón (SADM / MOR), Buenos Aires, Argentina.
+                                    </Box>
+                                    <Box mt={4}>
+                                        Centro de Instrucción y Entrenamiento (CIAC) Tipo 3 certificado por ANAC.
+                                    </Box>
+                                </div>
                             </Grid>
                             <Grid item xs={9} sm={3} mt={5}>
                                 <div className="footerTitle">
@@ -39,42 +44,60 @@ export default function Footer() {
                                     +54 9 11 5481 2986
                                 </Box>
                                 <Box mt={1}>
-                                    < MailOutlineIcon />
-                                    <Link href='mailto:gastondigilio@gmail.com' color='inherit'>
-                                        gastondigilio@gmail.com
-                                    </Link>
+                                    <div className="footerPrueba">
+                                        < MailOutlineIcon />
+                                        <Link href='mailto:gastondigilio@gmail.com' color='inherit'>
+                                            gastondigilio@gmail.com
+                                        </Link>
+                                    </div>
                                 </Box>
                             </Grid>
                             <Grid item xs={9} sm={3} mt={5}>
                                 <div className="footerTitle">
-                                <Box>Más Información</Box>
-                                </div>
-                                <Box sx={{ mt: 2, display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
-                                    <Box>
-                                        <Link href='/asdsa' color='inherit'>
-                                            <i className='fa fa-twitter'></i>
-                                        </Link>
-                                    </Box>
-                                    <Box>
-                                        <Link href='/asdsa' color='inherit'>
-                                            <i className='fa fa-facebook'></i>
-                                        </Link>
-                                    </Box>
-                                    <Box>
-                                        <Link href='/asdsa' color='inherit'>
-                                            <i className='fa fa-instagram'></i>
-                                        </Link>
-                                    </Box>
-                                </Box>
-                            </Grid>
-                            <Grid item xs={9} sm={3} mt={5}>
-                                <div className="footerTitle">
-                                <Box>Seguinos en</Box>
+                                    <Box>Más información</Box>
                                 </div>
                                 <Box mt={2}>
-                                    <Link href='/asdsa' color='inherit'>
-                                        
+                                    <Link href='/sobrenosotros' color='inherit'>
+                                        Sobre nosotros
                                     </Link>
+                                </Box>
+                                <Box mt={1}>
+                                    <Link href='/cursos' color='inherit'>
+                                        Cursos
+                                    </Link>
+                                </Box>
+                                <Box mt={1}>
+                                    <Link href='/estudiantes' color='inherit'>
+                                        Estudiantes
+                                    </Link>
+                                </Box>
+                                <Box mt={1}>
+                                    <Link href='/galeria' color='inherit'>
+                                        Galería
+                                    </Link>
+                                </Box>
+                                <Box mt={1}>
+                                    <Link href='/login' color='inherit'>
+                                        Turnos
+                                    </Link>
+                                </Box>
+                            </Grid>
+                            <Grid item xs={9} sm={3} mt={5}>
+                                <div className="footerTitle">
+                                    <Box>Seguinos en</Box>
+                                </div>
+                                <Box mt={2}>
+                                    <div className="footerPrueba">
+                                        <Link href='https://www.instagram.com' target="_blank" color='inherit'>
+                                            <img src={InstagramIcon} width={25} />
+                                        </Link>
+                                        <Link href='https://www.facebook.com' target="_blank" color='inherit'>
+                                            <img src={FacebookIcon} width={25} />
+                                        </Link>
+                                        <Link href='https://www.twitter.com' target="_blank" color='inherit'>
+                                            <img src={TwitterIcon} width={25} />
+                                        </Link>
+                                    </div>
                                 </Box>
                             </Grid>
                         </Grid>
