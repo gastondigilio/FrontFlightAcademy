@@ -7,3 +7,18 @@ a:active {
 .footerTitle{
   font-size: 25px;
 }
+
+.footerPrueba{
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerName{
+  text-align: justify;
+}
+
+.asdasd{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
