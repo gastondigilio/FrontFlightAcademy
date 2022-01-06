@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../../navBar/navBar';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import Footer from '../../footer/footer';
 
 export default function PilotoComercial() {
     return (
@@ -158,6 +159,7 @@ export default function PilotoComercial() {
                     Volver
                 </button>
             </Link>
+            <Footer />
         </div>
     )
 }

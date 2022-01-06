@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from '../../navBar/navBar';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 import {Link} from 'react-router-dom';
+import Footer from '../../footer/footer';
 
 export default function PilotoPrivado() {
     return (
@@ -135,6 +136,7 @@ export default function PilotoPrivado() {
                 Volver
             </button>
             </Link>
+            <Footer />
         </div>
     )
 }

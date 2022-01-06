@@ -144,7 +144,8 @@ export default function Cursos() {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     height: 300,
-                                    backgroundColor: 'rgba(8, 38, 46, 0.247)',
+                                    // backgroundColor: 'rgba(8, 38, 46, 0.247)',
+                                    border: '2px solid black'
                                 }}
                             >
                                 <h4>Curso Piloto Privado de Avión</h4>
@@ -168,6 +169,7 @@ export default function Cursos() {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     height: 280,
+                                    border: '2px solid black'
                                 }}
                             >
                                 <h4>Curso Piloto Comercial de Avión</h4>
@@ -191,6 +193,7 @@ export default function Cursos() {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     height: 270,
+                                    border: '2px solid black'
                                 }}
                             >
                                 <h4>Curso Piloto Comercial de Primera Clase de Avión</h4>
@@ -214,6 +217,7 @@ export default function Cursos() {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     height: 240,
+                                    border: '2px solid black'
                                 }}
                             >
                                 <h4>Curso Instructor de Vuelo</h4>
