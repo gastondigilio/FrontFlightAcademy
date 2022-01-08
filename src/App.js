@@ -12,6 +12,7 @@ import PilotoComercialPrimera from './components/cursos/cursoPilotoComercialPrim
 import InstructorVuelo from './components/cursos/cursoInstructorVuelo/instructorVuelo';
 import Estudiantes from './components/Estudiantes/estudiantes';
 import SobreNosotros from './components/sobreNosotros/sobreNosotros';
+import Galeria from './components/galeria/galeria';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -30,6 +31,7 @@ function App() {
           <Route exact path='/cursos/instructorvuelo' component={InstructorVuelo} />
           <Route exact path='/estudiantes' component={Estudiantes} />
           <Route exact path='/sobrenosotros' component={SobreNosotros} />
+          <Route exact path='/galeria' component={Galeria} />
           <Route exact path="/perfil" component={Perfil} /> 
           <Route exact path="/register" component={Register} />
 

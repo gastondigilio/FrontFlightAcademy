@@ -35,7 +35,7 @@ export default function NavBar() {
                 <NavbarBrand href="/estudiantes">
                     Estudiantes
                 </NavbarBrand>
-                <NavbarBrand href="/">
+                <NavbarBrand href="/galeria">
                     Galería
                 </NavbarBrand>
                 <NavbarBrand href="/login">
