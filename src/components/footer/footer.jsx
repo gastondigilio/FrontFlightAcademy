@@ -57,23 +57,23 @@ export default function Footer() {
                                     <Box>Más información</Box>
                                 </div>
                                 <Box mt={2}>
-                                    <Link href='/sobrenosotros' color='inherit'>
-                                        Sobre nosotros
+                                    <Link href='https://cad.anac.gob.ar/' target='_blank' color='inherit'>
+                                        CAD ANAC
                                     </Link>
                                 </Box>
                                 <Box mt={1}>
-                                    <Link href='/cursos' color='inherit'>
-                                        Cursos
+                                    <Link href='http://ais.anac.gov.ar/notam' target='_blank' color='inherit'>
+                                        NOTAMs
                                     </Link>
                                 </Box>
                                 <Box mt={1}>
-                                    <Link href='/estudiantes' color='inherit'>
-                                        Estudiantes
+                                    <Link href='https://skyvector.com/' target='_blank' color='inherit'>
+                                        Sky Vector
                                     </Link>
                                 </Box>
                                 <Box mt={1}>
-                                    <Link href='/galeria' color='inherit'>
-                                        Galería
+                                    <Link href='https://yovuelo.com.ar/' target='_blank'color='inherit'>
+                                        Yo vuelo
                                     </Link>
                                 </Box>
                                 <Box mt={1}>
