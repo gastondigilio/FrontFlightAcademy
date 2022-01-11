@@ -13,6 +13,7 @@ import InstructorVuelo from './components/cursos/cursoInstructorVuelo/instructor
 import Estudiantes from './components/Estudiantes/estudiantes';
 import SobreNosotros from './components/sobreNosotros/sobreNosotros';
 import Galeria from './components/galeria/galeria';
+import PoliticaPrivacidad from './components/politicaPrivacidad/politicaPrivacidad';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -25,13 +26,14 @@ function App() {
           <Route exact path='/login' component={Login} />
           <Route exact path="/home" component={Home} />
           <Route exact path='/cursos' component={Cursos} />
-          <Route exact path='/cursos/pilotoprivado' component={PilotoPrivado} />
-          <Route exact path='/cursos/pilotocomercial' component={PilotoComercial} />
-          <Route exact path='/cursos/pilotocomercialprimeraclase' component={PilotoComercialPrimera} />
-          <Route exact path='/cursos/instructorvuelo' component={InstructorVuelo} />
+          <Route exact path='/cursos/piloto-privado' component={PilotoPrivado} />
+          <Route exact path='/cursos/piloto-comercial' component={PilotoComercial} />
+          <Route exact path='/cursos/piloto-comercial-primera-clase' component={PilotoComercialPrimera} />
+          <Route exact path='/cursos/instructor-vuelo' component={InstructorVuelo} />
           <Route exact path='/estudiantes' component={Estudiantes} />
           <Route exact path='/sobrenosotros' component={SobreNosotros} />
           <Route exact path='/galeria' component={Galeria} />
+          <Route exact path='/politica-privacidad' component={PoliticaPrivacidad} />
           <Route exact path="/perfil" component={Perfil} /> 
           <Route exact path="/register" component={Register} />
 
