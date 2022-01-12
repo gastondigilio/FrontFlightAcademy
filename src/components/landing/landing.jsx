@@ -31,7 +31,7 @@ export default function Landing() {
                                 <CardText>
                                     La licencia de piloto privado de avión con VFR controlado te permitirá volar monomotores de hasta 5.700 Kg de peso máximo de despegue.
                                 </CardText>
-                                <Button href="/cursos/pilotoprivado">
+                                <Button href="/cursos/piloto-privado">
                                     Más info
                                 </Button>
                             </CardBody>
@@ -50,7 +50,7 @@ export default function Landing() {
                                 <CardText>
                                     La licencia de piloto comercial de avión con HVI te permitirá volar aeronaves comerciales de hasta 5.700 Kg de MTOW.
                                 </CardText>
-                                <Button href="/cursos/pilotocomercial">
+                                <Button href="/cursos/piloto-comercial">
                                     Más info
                                 </Button>
                             </CardBody>
@@ -69,7 +69,7 @@ export default function Landing() {
                                 <CardText>
                                     La Licencia te habilita como piloto de vuelos comerciales en aeronaves de hasta 20.000 kgs.
                                 </CardText>
-                                <Button href="/cursos/pilotocomercialprimeraclase">
+                                <Button href="/cursos/piloto-comercial-primera-clase">
                                     Más info
                                 </Button>
                             </CardBody>
@@ -88,7 +88,7 @@ export default function Landing() {
                                 <CardText>
                                     Esta licencia te permitirá a instruir alumnos y pilotos hasta el nivel de tu licencia y habilitaciones.
                                 </CardText>
-                                <Button href="/cursos/instructorvuelo">
+                                <Button href="/cursos/instructor-vuelo">
                                     Más info
                                 </Button>
                             </CardBody>

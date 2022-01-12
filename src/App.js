@@ -14,6 +14,7 @@ import Estudiantes from './components/Estudiantes/estudiantes';
 import SobreNosotros from './components/sobreNosotros/sobreNosotros';
 import Galeria from './components/galeria/galeria';
 import PoliticaPrivacidad from './components/politicaPrivacidad/politicaPrivacidad';
+import PoliticaCookies from './components/politicaCookies/politicaCookies';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -31,9 +32,10 @@ function App() {
           <Route exact path='/cursos/piloto-comercial-primera-clase' component={PilotoComercialPrimera} />
           <Route exact path='/cursos/instructor-vuelo' component={InstructorVuelo} />
           <Route exact path='/estudiantes' component={Estudiantes} />
-          <Route exact path='/sobrenosotros' component={SobreNosotros} />
+          <Route exact path='/sobre-nosotros' component={SobreNosotros} />
           <Route exact path='/galeria' component={Galeria} />
           <Route exact path='/politica-privacidad' component={PoliticaPrivacidad} />
+          <Route exact path='/politica-cookies' component={PoliticaCookies} />
           <Route exact path="/perfil" component={Perfil} /> 
           <Route exact path="/register" component={Register} />
 

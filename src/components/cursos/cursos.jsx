@@ -151,7 +151,7 @@ export default function Cursos() {
                                 <h4>Curso Piloto Privado de Avión</h4>
                                 {/* <img alt='k' className='img' src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" /> */}
                                 <p className='detailSummary'>La licencia de piloto privado de avión con VFR controlado te permitirá volar monomotores de hasta 5.700 Kg de peso máximo de despegue.</p>
-                                <Button href="/cursos/pilotoprivado" className="btn6">
+                                <Button href="/cursos/piloto-privado" className="btn6">
                                     Más info
                                 </Button>
                                 {/* <Chart /> */}
@@ -175,7 +175,7 @@ export default function Cursos() {
                                 <h4>Curso Piloto Comercial de Avión</h4>
                                 {/* <img alt='k' className='img' src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" /> */}
                                 <p className='detailSummary'>La licencia de piloto comercial de avión con HVI te permitirá volar aeronaves comerciales de hasta 5.700 Kg de MTOW.</p>
-                                <Button href="/cursos/pilotocomercial" className="btn6">
+                                <Button href="/cursos/piloto-comercial" className="btn6">
                                     Más info
                                 </Button>
                                 {/* <Chart /> */}
@@ -199,7 +199,7 @@ export default function Cursos() {
                                 <h4>Curso Piloto Comercial de Primera Clase de Avión</h4>
                                 {/* <img alt='k' className='img' src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" /> */}
                                 <p className='detailSummary'>La Licencia te habilita como piloto de vuelos comerciales en aeronaves de hasta 20.000 kgs.</p>
-                                <Button href="/cursos/pilotocomercialprimeraclase" className="btn6">
+                                <Button href="/cursos/piloto-comercial-primera-clase" className="btn6">
                                     Más info
                                 </Button>
                                 {/* <Chart /> */}
@@ -223,7 +223,7 @@ export default function Cursos() {
                                 <h4>Curso Instructor de Vuelo</h4>
                                 {/* <img alt='k' className='img' src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" /> */}
                                 <p className='detailSummary'>Esta licencia te permitirá a instruir alumnos y pilotos hasta el nivel de tu licencia y habilitaciones.</p>
-                                <Button href="/cursos/instructorvuelo" className="btn6">
+                                <Button href="/cursos/instructor-vuelo" className="btn6">
                                     Más info
                                 </Button>
                                 {/* <Chart /> */}
