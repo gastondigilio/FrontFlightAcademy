@@ -1,57 +1,4 @@
-// import './landing.css';
-// import React from 'react';
-// import { InputGroup, Input, Button, Media, ButtonGroup, Carousel, CarouselIndicators, CarouselItem, CarouselCaption, CarouselControl, UncontrolledCarousel } from 'reactstrap';
-// import foto5 from '../../images/foto5.gif';
-
-// export default function Login(){
-//     return(
-//         <div className="contenedorLogin">
-//                 <h4>Bienvenidos</h4>
-//                 <h5>Inicie sesión para continuar</h5>
-//                 <Media>
-//                     <Media left href="#">
-//                         <Media
-//                             object
-//                             src=
-//                             {foto5}
-//                             alt="cat"
-//                         />
-//                     </Media>
-//                 </Media>
-//                 <br />
-//                 <InputGroup>
-//                     <Input placeholder="Usuario" />
-//                 </InputGroup>
-//                 <br />
-//                 <InputGroup>
-//                     <Input placeholder="Contraseña" />
-//                 </InputGroup>
-//                 <br />
-//                 <div className="contenedorBoton">
-//                     <ButtonGroup>
-//                         <div className="boton">
-//                             <Button
-//                                 color="primary"
-//                                 outline
-//                             >
-//                                 Iniciar sesión
-//                             </Button>
-//                         </div>
-//                         <br />
-//                         <div className="boton1">
-//                             <Button
-//                             color='primary'
-//                                 outline
-//                             >
-//                                 Registrarme
-//                             </Button>
-//                         </div>
-//                     </ButtonGroup>
-//                 </div>
-//             </div>
-//     )
-// }
-
+import './landing.css';
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -63,14 +10,11 @@ import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import foto4 from '../../images/foto4.png';
-import foto5 from '../../images/foto5.gif';
 import foto6 from '../../images/foto6.png';
 import Register from '../register/register'
-import './landing.css';
 
 
 function Copyright(props) {
