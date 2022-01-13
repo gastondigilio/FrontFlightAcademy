@@ -102,10 +102,10 @@ export default function Footer() {
                             </Grid>
                         </Grid>
                         <Box textAlign='center' pt={{ xs: 5, sm: 5 }} pb={{ xs: 5, sm: 0 }}>
-                            <Link href="#" color="inherit">
+                            <Link href="/politica-privacidad" color="inherit">
                                 {' Política de privacidad |'}
                             </Link>
-                            <Link href="#" color="inherit">
+                            <Link href="/politica-cookies" color="inherit">
                                 {' Política de cookies |'}
                             </Link>
                             <Link href="#" color="inherit">
