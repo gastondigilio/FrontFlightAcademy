@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../navBar/navBar';
 import Footer from '../footer/footer';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import Link from "@mui/material/Link";
 
 export default function PoliticaCookies() {
     return (
@@ -76,15 +76,17 @@ export default function PoliticaCookies() {
                             </CardText>
                             <CardText className="cardText">
                             <p>A continuación puede acceder a la configuración de los navegadores webs más frecuentes para aceptar, instalar o desactivar las cookies:</p>
-                            <div>
+                            <ul>
                                 <Link href='https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias?redirectslug=habilitar-y-deshabilitar-cookies-que-los-sitios-we&redirectlocale=es' target="_blank" color='inherit'>
-                                <p>Firefox</p>
+                                <li>Firefox</li>
                                 </Link>
                                 <Link href='https://support.apple.com/es-es/HT201265' target='_blank' color='inherit'>
                                 <li>Safari</li>
                                 </Link>
+                                <Link href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" color='inherit'>
                                 <li>Google Chrome</li>
-                            </div>
+                                </Link>
+                                </ul>
                             </CardText>
                         </CardBody>
                     </Card>
