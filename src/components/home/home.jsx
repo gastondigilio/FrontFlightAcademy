@@ -321,6 +321,11 @@ function DashboardContent() {
                 </Paper>
               </Grid> */}
       </Box>
+      <Link href="/login">
+        <button className='botonVolverLogin'>
+          Salir
+        </button>
+      </Link>
     </ThemeProvider>
   );
 }

@@ -1,5 +1,7 @@
-import * as React from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from "react-router-dom";
+import { postCreateUser } from '../../redux/actions/index';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -30,25 +32,47 @@ const theme = createTheme();
 
 export default function Register() {
   const dispatch = useDispatch();
+  const history = useHistory();
 
-  let logIn = useSelector((state) => state.userLogin);
-  console.log(logIn, "probando")
+  const [input, setInput] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    pass: "",
+    rol: "",
+  });
 
-  let avatar = [];
 
-  if (logIn !== undefined || logIn !== null) {
-    avatar = logIn?.email?.slice(0, 1).toUpperCase();
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+  const handleInputChange = function (e) {
+    setInput({
+      ...input,
+      [e.target.name]: e.target.value,
     });
   };
+  // console.log(input, "enzooo")
+
+  // let logIn = useSelector((state) => state.userLogin);
+  // console.log(logIn, "probando")
+
+  // let avatar = [];
+
+  // if (logIn !== undefined || logIn !== null) {
+  //   avatar = logIn?.email?.slice(0, 1).toUpperCase();
+  // }
+
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    dispatch(postCreateUser(input));
+    history.push('/login');
+    setInput({
+      name: "",
+      lastName: "",
+      email: "",
+      pass: "",
+      rol: "",
+    });
+  }
 
   return (
     <div className="registerContainer">
@@ -70,16 +94,17 @@ export default function Register() {
               <Typography component="h1" variant="h5">
                 Registrarse
               </Typography>
-              <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+              <Box component="form" noValidate onSubmit={e => handleSubmit(e)} sx={{ mt: 3 }}>
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm={6}>
                     <TextField
                       autoComplete="given-name"
-                      name="firstName"
+                      name="name"
                       required
                       fullWidth
-                      id="firstName"
+                      id="name"
                       label="Nombre(S)"
+                      onChange={handleInputChange}
                       autoFocus
                     />
                   </Grid>
@@ -90,6 +115,7 @@ export default function Register() {
                       id="lastName"
                       label="Apellido(S)"
                       name="lastName"
+                      onChange={handleInputChange}
                       autoComplete="family-name"
                     />
                   </Grid>
@@ -100,6 +126,7 @@ export default function Register() {
                       id="email"
                       label="Email"
                       name="email"
+                      onChange={handleInputChange}
                       autoComplete="email"
                     />
                   </Grid>
@@ -110,6 +137,7 @@ export default function Register() {
                       id="email"
                       label="Repetir Email"
                       name="email"
+                      onChange={handleInputChange}
                       autoComplete="email"
                     />
                   </Grid>
@@ -117,10 +145,11 @@ export default function Register() {
                     <TextField
                       required
                       fullWidth
-                      name="password"
+                      name="pass"
                       label="Password"
                       type="password"
                       id="password"
+                      onChange={handleInputChange}
                       autoComplete="new-password"
                     />
                   </Grid>
@@ -128,11 +157,23 @@ export default function Register() {
                     <TextField
                       required
                       fullWidth
-                      name="password"
+                      name="pass"
                       label="Repetir Password"
                       type="password"
                       id="password"
+                      onChange={handleInputChange}
                       autoComplete="new-password"
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      required
+                      fullWidth
+                      id="rol"
+                      name="rol"
+                      label="Rol"
+                      onChange={handleInputChange}
+                      autoComplete="rol"
                     />
                   </Grid>
                   {/* <Grid item xs={12}>
