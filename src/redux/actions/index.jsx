@@ -20,9 +20,22 @@ export const getAllUsers = payload => {
 };
 
 export const postCreateUser = payload => {
+  console.log(payload, "soy el payload")
   return async () => {
     try {
       let res = await axios.post(`http://localhost:3001/users/create`, payload);
+      return res.data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const loginUser = payload => {
+  console.log(payload, "soy el payload")
+  return async () => {
+    try {
+      let res = await axios.post(`http://localhost:3001/users/login`, payload);
       return res.data;
     } catch (error) {
       console.log(error);

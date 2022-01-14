@@ -1,5 +1,8 @@
 import './landing.css';
-import * as React from 'react';
+import React, {useState} from 'react';
+import {loginUser} from '../../redux/actions/index.jsx';
+import {useHistory} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -33,15 +36,31 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignInSide() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const [input, setInput] = useState({
+    id: "",
+    pass: "",
+    email: "",
+  })
+
+  const handleInputChange = function (e) {
+    setInput({
+      ...input,
+      [e.target.name]: e.target.value,
     });
   };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    dispatch(loginUser(input));
+    history.push('/home');
+    setInput({
+      id: "",
+      pass: "",
+      email: "",
+    });
+  }
 
   return (
     //   <div className="contenedorLogin">
@@ -81,25 +100,27 @@ export default function SignInSide() {
               <Typography component="h1" variant="h5">
                 Flight Academy
               </Typography>
-              <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+              <Box component="form" noValidate onSubmit={e => handleSubmit(e)} sx={{ mt: 1 }}>
                 <TextField
                   margin="normal"
                   required
                   fullWidth
                   id="email"
-                  label="Email o usuario"
+                  label="Email"
                   name="email"
                   autoComplete="email"
+                  onChange={handleInputChange}
                   autoFocus
                 />
                 <TextField
                   margin="normal"
                   required
                   fullWidth
-                  name="password"
+                  name="pass"
                   label="Contraseña"
                   type="password"
-                  id="password"
+                  id="pass"
+                  onChange={handleInputChange}
                   autoComplete="current-password"
                 />
                 <FormControlLabel
