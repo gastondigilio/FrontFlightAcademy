@@ -5,7 +5,7 @@ import {
   
   const initialState = {
     users: [],
-    userLogin: [],
+    userLogin: []
   };
   
   export default function rootReducer(state = initialState, action) {

@@ -1,8 +1,8 @@
 import './landing.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {loginUser} from '../../redux/actions/index.jsx';
 import {useHistory} from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector  } from 'react-redux';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -18,6 +18,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import foto4 from '../../images/foto4.png';
 import foto6 from '../../images/foto6.png';
 import Register from '../register/register'
+
 
 
 function Copyright(props) {
@@ -38,13 +39,19 @@ const theme = createTheme();
 export default function SignInSide() {
   const dispatch = useDispatch();
   const history = useHistory();
+  const userLogin = useSelector((state) => state.userLogin)
+
+  
   const [input, setInput] = useState({
-    id: "",
     pass: "",
     email: "",
   })
+  const [islogin, setIslogin] = useState(false)
+
+
 
   const handleInputChange = function (e) {
+    console.log( e.target.value)
     setInput({
       ...input,
       [e.target.name]: e.target.value,
@@ -53,15 +60,34 @@ export default function SignInSide() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(loginUser(input));
-    history.push('/home');
-    setInput({
-      id: "",
+    if(input.email && input.pass){
+      dispatch(loginUser(input));
+    
+   
+    setTimeout(() => {
+      
+      if(userLogin.id){
+        history.push("/home")
+        setInput({
+          pass: "",
+          email: "",
+        });
+        console.log("se logeo")
+      }else {
+        setInput({
       pass: "",
       email: "",
     });
+        alert("Las Credenciales no coinciden ")
+      }
+    
+    }, 3000);
+    }else{
+      alert("rellene los campos")
+    }
+    
+    
   }
-
   return (
     //   <div className="contenedorLogin">
     <div>
