@@ -33,8 +33,9 @@ export default function PilotoPrivado() {
                                 Programa
                             </CardTitle>
                             <CardSubtitle
-                                className="mb-2 text-muted"
+                                // className="mb-2 text-muted"
                                 tag="h6"
+                                align="left"
                             >
                                 Cursada teórica
                             </CardSubtitle>
@@ -55,8 +56,9 @@ export default function PilotoPrivado() {
                                 </ul>
                             </CardText>
                             <CardSubtitle
-                                className="mb-2 text-muted"
+                                // className="mb-2 text-muted"
                                 tag="h6"
+                                align="left"
                             >
                                 Cursada práctica
                             </CardSubtitle>

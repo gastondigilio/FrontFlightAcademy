@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../navBar/navBar';
 import Footer from '../footer/footer';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
-import Link from "@mui/material/Link";
+import { Link } from 'react-router-dom'
 
 export default function PoliticaCookies() {
     return (
@@ -13,19 +13,19 @@ export default function PoliticaCookies() {
                     <Card
                     >
                         <CardBody>
-                            <CardTitle tag="h5">
+                            <CardTitle tag="h5" align="left">
                                 Políticas de cookies
                             </CardTitle>
                             <CardText className="cardText">
                                 Esta web utiliza cookies propias y de terceros para ofrecerle una mejor experiencia y servicio. Al navegar o utilizar nuestros servicios acepta el uso que hacemos de las cookies. Sin embargo, tiene la opción de impedir la generación de cookies y la eliminación de las mismas mediante la selección de la correspondiente opción en su Navegador. En caso de bloquear el uso de cookies en su navegador es posible que algunos servicios o funcionalidades de la página Web no estén disponibles.
                             </CardText>
-                            <CardTitle tag="h5">
+                            <CardTitle tag="h5" align="left">
                                 ¿Qué son las cookies?
                             </CardTitle>
                             <CardText className="cardText">
                                 Una cookie es un fichero que se descarga en su ordenador al acceder a determinadas páginas web. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de navegación de un usuario o de su equipo y, dependiendo de la información que contengan y de la forma en que utilice su equipo, pueden utilizarse para reconocer al usuario.
                             </CardText>
-                            <CardTitle tag="h5">
+                            <CardTitle tag="h5" align="left">
                                 Cookies que se utilizan en este sitio Web
                             </CardTitle>
                             <CardText className="cardText">
@@ -43,7 +43,7 @@ export default function PoliticaCookies() {
                             <CardText className="cardText">
                                 Según los términos incluidos en el artículo 22.2 de la Ley 34/2002 de Servicios de la Sociedad de la Información y Comercio Electrónico, si continúas navegando, <strong>estarás prestando tu consentimiento</strong> para el empleo de las cookies que detallo a continuación.
                             </CardText>
-                            <CardTitle tag="h5">
+                            <CardTitle tag="h5" align="left">
                                 Las cookies de esta web ayudan a:
                             </CardTitle>
                             <CardText className="cardText">
@@ -58,7 +58,7 @@ export default function PoliticaCookies() {
                                     <li>Mostrarte anuncios en función de tus hábitos de navegación.</li>
                                 </ul>
                             </CardText>
-                            <CardTitle tag="h5">
+                            <CardTitle tag="h5" align="left">
                                 No utilizaré jamás cookies para:
                             </CardTitle>
                             <CardText className="cardText">
@@ -68,7 +68,7 @@ export default function PoliticaCookies() {
                                     <li>Compartir datos de identificación personal a terceros.</li>
                                 </ul>
                             </CardText>
-                            <CardTitle tag="h5">
+                            <CardTitle tag="h5" align="left">
                                 ¿Cómo desactivar las cookies?
                             </CardTitle>
                             <CardText className="cardText">

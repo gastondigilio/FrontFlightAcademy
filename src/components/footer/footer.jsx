@@ -108,7 +108,7 @@ export default function Footer() {
                             <Link href="/politica-cookies" color="inherit">
                                 {' Política de cookies |'}
                             </Link>
-                            <Link href="#" color="inherit">
+                            <Link href="/aviso-legal" color="inherit">
                                 {' Aviso legal '}
                             </Link>
                         </Box>
