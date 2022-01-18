@@ -32,8 +32,9 @@ export default function InstructorVuelo() {
                                 Programa
                             </CardTitle>
                             <CardSubtitle
-                                className="mb-2 text-muted"
+                                // className="mb-2 text-muted"
                                 tag="h6"
+                                align="left"
                             >
                                 Cursada teórica
                             </CardSubtitle>
@@ -62,8 +63,9 @@ export default function InstructorVuelo() {
                                 La currícula incluye materias extracurriculares, excursiones y trabajos integradores. Se dictan varios cursos teóricos por año.
                             </CardText>
                             <CardSubtitle
-                                className="mb-2 text-muted"
+                                // className="mb-2 text-muted"
                                 tag="h6"
+                                align="left"
                             >
                                 Cursada práctica
                             </CardSubtitle>

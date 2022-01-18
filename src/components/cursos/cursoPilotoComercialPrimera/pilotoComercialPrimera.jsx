@@ -32,8 +32,9 @@ export default function PilotoComercialPrimera() {
                                 Programa
                             </CardTitle>
                             <CardSubtitle
-                                className="mb-2 text-muted"
+                                // className="mb-2 text-muted"
                                 tag="h6"
+                                align="left"
                             >
                                 Cursada teórica
                             </CardSubtitle>
@@ -60,8 +61,9 @@ export default function PilotoComercialPrimera() {
                                 La cursada práctica puede hacerse a distancia, según los tiempos del alumno.
                             </CardText>
                             <CardSubtitle
-                                className="mb-2 text-muted"
+                                // className="mb-2 text-muted"
                                 tag="h6"
+                                align="left"
                             >
                                 Cursada práctica
                             </CardSubtitle>
