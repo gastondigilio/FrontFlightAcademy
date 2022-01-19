@@ -16,6 +16,8 @@ import {
           users: action.payload
         };
         case GET_USER_LOGIN:
+          console.log(action.payload, "payload reducersss")
+          console.log(state.userLogin, "stateeee")
           return {
             ...state,
             userLogin: action.payload

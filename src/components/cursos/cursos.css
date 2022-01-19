@@ -34,13 +34,30 @@
     font-weight: bold;
     padding: 10px;
   }
-  
+/*   
   .img {
     width: 10%;
     height: 8%%;
     border-radius: 8px;
+  } */
+
+  .imagenCursos{
+    width: 25%;
+    height: 78%;
+    border-radius: 15px;
   }
 
+  .divCursos{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .divCursos2{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
   
   .detailContainerCard2 {
     display: flex;

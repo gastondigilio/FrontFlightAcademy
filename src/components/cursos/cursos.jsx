@@ -9,6 +9,12 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Footer from '../footer/footer';
+import foto6 from '../../images/foto6.png';
+import pca from '../../images/pca.jpg';
+import pcia from '../../images/pcia.jpg';
+import iv from '../../images/iv.jpg';
+import etvi1 from '../../images/etvi1.jpg';
+import etvi2 from '../../images/etvi2.jpg';
 
 export default function Cursos() {
     return (
@@ -149,11 +155,15 @@ export default function Cursos() {
                                 }}
                             >
                                 <h4>Curso Piloto Privado de Avión</h4>
-                                {/* <img alt='k' className='img' src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" /> */}
-                                <p className='detailSummary'>La licencia de piloto privado de avión con VFR controlado te permitirá volar monomotores de hasta 5.700 Kg de peso máximo de despegue.</p>
-                                <Button href="/cursos/piloto-privado" className="btn6">
-                                    Más info
-                                </Button>
+                                <div className="divCursos">
+                                    <img src={foto6} className="imagenCursos" />
+                                    <div className="divCursos2">
+                                        <p className='detailSummary'>La licencia de piloto privado de avión con VFR controlado te permitirá volar monomotores de hasta 5.700 Kg de peso máximo de despegue.</p>
+                                        <Button href="/cursos/piloto-privado" className="btn6">
+                                            Más info
+                                        </Button>
+                                    </div>
+                                </div>
                                 {/* <Chart /> */}
                             </Paper>
                         </Grid>
@@ -168,16 +178,20 @@ export default function Cursos() {
                                     p: 2,
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    height: 280,
+                                    height: 300,
                                     border: '2px solid black'
                                 }}
                             >
                                 <h4>Curso Piloto Comercial de Avión</h4>
-                                {/* <img alt='k' className='img' src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" /> */}
-                                <p className='detailSummary'>La licencia de piloto comercial de avión con HVI te permitirá volar aeronaves comerciales de hasta 5.700 Kg de MTOW.</p>
-                                <Button href="/cursos/piloto-comercial" className="btn6">
-                                    Más info
-                                </Button>
+                                <div className="divCursos">
+                                    <img src={pca} className="imagenCursos" />
+                                    <div className="divCursos2">
+                                        <p className='detailSummary'>La licencia de piloto comercial de avión con HVI te permitirá volar aeronaves comerciales de hasta 5.700 Kg de MTOW.</p>
+                                        <Button href="/cursos/piloto-comercial" className="btn6">
+                                            Más info
+                                        </Button>
+                                    </div>
+                                </div>
                                 {/* <Chart /> */}
                             </Paper>
                         </Grid>
@@ -192,16 +206,20 @@ export default function Cursos() {
                                     p: 2,
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    height: 270,
+                                    height: 300,
                                     border: '2px solid black'
                                 }}
                             >
                                 <h4>Curso Piloto Comercial de Primera Clase de Avión</h4>
-                                {/* <img alt='k' className='img' src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" /> */}
-                                <p className='detailSummary'>La Licencia te habilita como piloto de vuelos comerciales en aeronaves de hasta 20.000 kgs.</p>
-                                <Button href="/cursos/piloto-comercial-primera-clase" className="btn6">
-                                    Más info
-                                </Button>
+                                <div className="divCursos">
+                                    <img src={pcia} className="imagenCursos" />
+                                    <div className="divCursos2">
+                                        <p className='detailSummary'>La Licencia te habilita como piloto de vuelos comerciales en aeronaves de hasta 20.000 kgs.</p>
+                                        <Button href="/cursos/piloto-comercial-primera-clase" className="btn6">
+                                            Más info
+                                        </Button>
+                                    </div>
+                                </div>
                                 {/* <Chart /> */}
                             </Paper>
                         </Grid>
@@ -216,16 +234,48 @@ export default function Cursos() {
                                     p: 2,
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    height: 240,
+                                    height: 300,
                                     border: '2px solid black'
                                 }}
                             >
                                 <h4>Curso Instructor de Vuelo</h4>
-                                {/* <img alt='k' className='img' src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" /> */}
-                                <p className='detailSummary'>Esta licencia te permitirá a instruir alumnos y pilotos hasta el nivel de tu licencia y habilitaciones.</p>
-                                <Button href="/cursos/instructor-vuelo" className="btn6">
-                                    Más info
-                                </Button>
+                                <div className="divCursos">
+                                    <img src={iv} className="imagenCursos" />
+                                    <div className="divCursos2">
+                                        <p className='detailSummary'>Esta licencia te permitirá a instruir alumnos y pilotos hasta el nivel de tu licencia y habilitaciones.</p>
+                                        <Button href="/cursos/instructor-vuelo" className="btn6">
+                                            Más info
+                                        </Button>
+                                    </div>
+                                </div>
+                                {/* <Chart /> */}
+                            </Paper>
+                        </Grid>
+                    </Grid>
+                </Container>
+                <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+                    <Grid container spacing={3}>
+                        {/* Chart */}
+                        <Grid item xs={12} md={8} lg={12}>
+                            <Paper
+                                sx={{
+                                    p: 2,
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    height: 300,
+                                    border: '2px solid black'
+                                }}
+                            >
+                                <h4>Curso Instructor de ETVI</h4>
+                                <div className="divCursos">
+                                    <img src={etvi2} className="imagenCursos" />
+                                    <div className="divCursos2">
+                                        <p className='detailSummary'>El curso de Instructor de ETVI te permite obtener la licencia con la que podrás impartir instrucción en simuladores de vuelo o entrenadores terrestres.</p>
+                                        <Button href="/cursos/instructor-simulador" className="btn6">
+                                            Más info
+                                        </Button>
+                                    </div>
+                                </div>
                                 {/* <Chart /> */}
                             </Paper>
                         </Grid>

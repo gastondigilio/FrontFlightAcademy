@@ -77,8 +77,8 @@ export default function Footer() {
                                     </Link>
                                 </Box>
                                 <Box mt={1}>
-                                    <Link href='/login' color='inherit'>
-                                        Turnos
+                                    <Link href='https://www.smn.gob.ar/' target='_blank'color='inherit'>
+                                        SMN
                                     </Link>
                                 </Box>
                             </Grid>

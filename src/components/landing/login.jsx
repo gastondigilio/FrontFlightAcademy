@@ -1,8 +1,8 @@
 import './landing.css';
-import React, {useState, useEffect} from 'react';
-import {loginUser} from '../../redux/actions/index.jsx';
-import {useHistory} from 'react-router-dom';
-import { useDispatch, useSelector  } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { loginUser } from '../../redux/actions/index.jsx';
+import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -41,7 +41,7 @@ export default function SignInSide() {
   const history = useHistory();
   const userLogin = useSelector((state) => state.userLogin)
 
-  
+
   const [input, setInput] = useState({
     pass: "",
     email: "",
@@ -51,7 +51,7 @@ export default function SignInSide() {
 
 
   const handleInputChange = function (e) {
-    console.log( e.target.value)
+    console.log(e.target.value)
     setInput({
       ...input,
       [e.target.name]: e.target.value,
@@ -60,33 +60,30 @@ export default function SignInSide() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if(input.email && input.pass){
+    if (input.email && input.pass) {
       dispatch(loginUser(input));
-    
-   
-    setTimeout(() => {
-      
-      if(userLogin.id){
+
+      console.log(userLogin.id, "theoooo")
+      // setTimeout(() => {
+
+      console.log(userLogin, "antes del IF")
+      if (userLogin.id) {
         history.push("/home")
         setInput({
           pass: "",
           email: "",
         });
         console.log("se logeo")
-      }else {
+      } else {
         setInput({
-      pass: "",
-      email: "",
-    });
-        alert("Las Credenciales no coinciden ")
+          pass: "",
+          email: "",
+        });
+        console.log("no se logueo")
       }
-    
-    }, 3000);
-    }else{
+    } else {
       alert("rellene los campos")
     }
-    
-    
   }
   return (
     //   <div className="contenedorLogin">
@@ -126,41 +123,42 @@ export default function SignInSide() {
               <Typography component="h1" variant="h5">
                 Flight Academy
               </Typography>
-              <Box component="form" noValidate onSubmit={e => handleSubmit(e)} sx={{ mt: 1 }}>
-                <TextField
-                  margin="normal"
+              <form onSubmit={e => (e)} sx={{ mt: 1 }}>
+                <input
+                  // margin="normal"
                   required
-                  fullWidth
-                  id="email"
+                  // fullWidth
+                  // id="email"
                   label="Email"
                   name="email"
-                  autoComplete="email"
+                  // autoComplete="email"
                   onChange={handleInputChange}
-                  autoFocus
+                // autoFocus
                 />
-                <TextField
-                  margin="normal"
+                <input
+                  // margin="normal"
                   required
-                  fullWidth
+                  // fullWidth
                   name="pass"
                   label="Contraseña"
                   type="password"
-                  id="pass"
+                  // id="pass"
                   onChange={handleInputChange}
-                  autoComplete="current-password"
+                // autoComplete="current-password"
                 />
                 <FormControlLabel
                   control={<Checkbox value="remember" color="primary" />}
                   label="Mantener sesión iniciada"
                 />
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
+                <button
+                  // type="submit"
+                  // fullWidth
+                  // variant="contained"
+                  // sx={{ mt: 3, mb: 2 }}
+                  onClick={handleSubmit}
                 >
                   Iniciar sesion
-                </Button>
+                </button>
                 <Grid container>
                   <Grid item xs>
                     <Link href="#" variant="body2" style={{ textDecoration: 'none' }}>
@@ -178,7 +176,7 @@ export default function SignInSide() {
                   </Grid>
                 </Grid>
                 <Copyright sx={{ mt: 5 }} />
-              </Box>
+              </form>
             </Box>
           </Grid>
         </Grid>

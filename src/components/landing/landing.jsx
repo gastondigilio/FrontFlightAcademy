@@ -5,8 +5,11 @@ import Login from './login';
 import NavBar from '../navBar/navBar';
 import fotoModificada1 from '../../images/fotoModificada1.png';
 import foto2 from '../../images/foto2.png';
-import foto3 from '../../images/foto3.png';
-import foto4 from '../../images/foto4.png';
+import foto6 from '../../images/foto6.png';
+import ppa from '../../images/ppa.png';
+import pcia from '../../images/pcia.jpg';
+import pca from '../../images/pca.jpg';
+import iv from '../../images/iv.jpg'
 import Footer from '../footer/footer';
 
 export default function Landing() {
@@ -21,7 +24,7 @@ export default function Landing() {
                             color="light"
                         >
                             <CardBody>
-                                <img src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" className="imagenLanding" />
+                                <img src={foto6} className="imagenLanding" />
                                 <CardSubtitle
                                     className="mb-2 text-muted"
                                     tag="h6"
@@ -40,7 +43,7 @@ export default function Landing() {
                             color="light"
                         >
                             <CardBody>
-                                <img src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" className="imagenLanding" />
+                                <img src={pca} className="imagenLanding" />
                                 <CardSubtitle
                                     className="mb-2 text-muted"
                                     tag="h6"
@@ -59,7 +62,7 @@ export default function Landing() {
                             color="light"
                         >
                             <CardBody>
-                                <img src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" className="imagenLanding" />
+                                <img src={pcia}className="imagenLanding" />
                                 <CardSubtitle
                                     className="mb-2 text-muted"
                                     tag="h6"
@@ -78,7 +81,7 @@ export default function Landing() {
                             color="light"
                         >
                             <CardBody>
-                                <img src="https://st4.depositphotos.com/1020091/19993/v/450/depositphotos_199939890-stock-illustration-airplane-silhouette-white-background-vector.jpg" className="imagenLanding" />
+                                <img src={iv} className="imagenLanding" />
                                 <CardSubtitle
                                     className="mb-2 text-muted"
                                     tag="h6"
