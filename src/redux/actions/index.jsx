@@ -36,6 +36,7 @@ export const loginUser = payload => {
   return async dispatch => {
     try {
       let res = await axios.post(`http://localhost:3001/users/login`, payload);
+      console.log(res.data, "res dataaaa")
       return dispatch({
         type: GET_USER_LOGIN,
 

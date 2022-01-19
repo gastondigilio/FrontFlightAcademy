@@ -10,6 +10,7 @@ import PilotoPrivado from './components/cursos/cursoPilotoPrivado/pilotoPrivado'
 import PilotoComercial from './components/cursos/cursoPilotoComercial/pilotoComercial';
 import PilotoComercialPrimera from './components/cursos/cursoPilotoComercialPrimera/pilotoComercialPrimera';
 import InstructorVuelo from './components/cursos/cursoInstructorVuelo/instructorVuelo';
+import InstructorSimulador from './components/cursos/cursoInstructorSimulador/intructorSimulador';
 import Estudiantes from './components/Estudiantes/estudiantes';
 import SobreNosotros from './components/sobreNosotros/sobreNosotros';
 import Galeria from './components/galeria/galeria';
@@ -32,6 +33,7 @@ function App() {
           <Route exact path='/cursos/piloto-comercial' component={PilotoComercial} />
           <Route exact path='/cursos/piloto-comercial-primera-clase' component={PilotoComercialPrimera} />
           <Route exact path='/cursos/instructor-vuelo' component={InstructorVuelo} />
+          <Route exact path='/cursos/instructor-simulador' component={InstructorSimulador} />
           <Route exact path='/estudiantes' component={Estudiantes} />
           <Route exact path='/sobre-nosotros' component={SobreNosotros} />
           <Route exact path='/galeria' component={Galeria} />

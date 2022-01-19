@@ -26,7 +26,7 @@ export default function NavBar() {
                 <div className="navName">
                     <img className="navImagen" src={foto2} />
                     <NavbarBrand href="/">
-                        Flights academy
+                        Flight academy
                     </NavbarBrand>
                 </div>
                 <NavbarToggler onClick={() => { setIsOpen(!isOpen) }} />

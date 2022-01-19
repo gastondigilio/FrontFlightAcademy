@@ -86,9 +86,11 @@
 
 .imagenLanding{
     width: 30%;
-    height: 50%;
+    /* height: 50%; */
     border-radius: 15px;
+    margin-bottom: 2%;
 }
+
 
 .cursosGrid{
     display: flex;
