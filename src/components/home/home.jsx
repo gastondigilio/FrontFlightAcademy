@@ -1,72 +1,6 @@
-// import './home.css';
-// import React from 'react';
-// import Navbar from "../navBar/navBar";
-// import NavBarVertical from "../navBarVertical/navBarVertical";
-// import { Form, Row, Col, FormGroup, Button, Label, Input } from 'reactstrap';
-
-// export default function Home() {
-//     return (
-//         <div>
-//             <Navbar />
-//             <div className="navBarVerticalContainer">
-//                 <NavBarVertical />
-//             </div>
-//             <div className="contenedor">
-//                 <h4>Bienvenido</h4>
-//                 {/* <div className="container">
-//                     <div className="containerGrid1">
-//                         <label>X vuelos totales</label>
-//                         <br></br>
-//                         <br></br>
-//                         <NavLink
-//                             active
-//                             href="#"
-//                         >
-//                             Más info
-//                         </NavLink>
-//                     </div>
-//                     <div className="containerGrid2">
-//                         <label>X hs de vuelo</label>
-//                         <br></br>
-//                         <br></br>
-//                         <NavLink
-//                             active
-//                             href="#"
-//                         >
-//                             Más info
-//                         </NavLink>
-//                     </div>
-//                     <div className="containerGrid3">
-//                         <label>X hs de vuelo este mes</label>
-//                         <br></br>
-//                         <br></br>
-//                         <NavLink
-//                             active
-//                             href="#"
-//                         >
-//                             Más info
-//                         </NavLink>
-//                     </div>
-//                     <div className="containerGrid4">
-//                         <label>X próximos turnos</label>
-//                         <br></br>
-//                         <br></br>
-//                         <NavLink
-//                             active
-//                             href="#"
-//                         >
-//                             Más info
-//                         </NavLink>
-//                     </div>
-//                 </div> */}
-
-//         </div>
-//         </div >
-//     )
-
-// }
-
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getUserHoursById } from '../../redux/actions/index';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -78,7 +12,6 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import Badge from '@mui/material/Badge';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
@@ -86,10 +19,10 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { mainListItems, secondaryListItems } from './listItems';
-import VuelosTotales from '../vuelosTotales/vuelosTotales';
-import HorasVuelosTotales from '../horasVuelosTotales/horasVuelosTotales';
-import HorasVuelosMes from '../horasVueloMes/horasVueloMes';
-import ProximosTurnos from '../proximoTurno/proximoTurno';
+import VuelosTotales from './vuelosTotales/vuelosTotales';
+import HorasVuelosTotales from './horasVuelosTotales/horasVuelosTotales';
+import HorasVuelosMes from './horasVueloMes/horasVueloMes';
+import ProximosTurnos from './proximoTurno/proximoTurno';
 import Windy from '../windy/Windy';
 import Metar from '../metar/metar';
 
@@ -152,14 +85,30 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
+
 const mdTheme = createTheme();
 
 function DashboardContent() {
+  const dispatch = useDispatch();
+const userLogin = useSelector((state) => state.userLogin);
+const userHours = useSelector((state) => state.userHours);
+
+async function getHours() {
+  if (userLogin.id) {
+    if (!userHours.hasOwnProperty("id")) {
+      dispatch(getUserHoursById(userLogin.id))
+    }
+  }
+}
+
+useEffect(() => {
+  getHours()
+}, [dispatch, userLogin.id, userHours]);
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
   };
-
+  console.log("holaa")
   return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
@@ -193,7 +142,7 @@ function DashboardContent() {
             </Typography>
             <IconButton color="inherit">
               {/* <Badge badgeContent={4} color="secondary"> */}
-                <AccountCircleIcon />
+              <AccountCircleIcon />
               {/* </Badge> */}
             </IconButton>
           </Toolbar>

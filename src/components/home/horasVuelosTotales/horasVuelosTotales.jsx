@@ -1,18 +1,20 @@
 import * as React from 'react';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import Title from '../home/Title';
+import Title from '../Title';
 
 function preventDefault(event) {
   event.preventDefault();
 }
 
-export default function ProximosTurnos() {
+
+
+export default function HorasVuelosTotales() {
   return (
     <React.Fragment>
-      <Title>Próximos turnos</Title>
+      <Title>Hs. de vuelo totales</Title>
       <Typography component="p" variant="h4">
-        3
+        200.5
       </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
         
