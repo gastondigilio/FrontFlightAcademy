@@ -7,12 +7,12 @@ function preventDefault(event) {
   event.preventDefault();
 }
 
-export default function HorasVuelosMes() {
+export default function HorasVuelosMes({hours}) {
   return (
     <React.Fragment>
       <Title>Hs. de vuelo este mes</Title>
       <Typography component="p" variant="h4">
-        40.7
+        {hours}
       </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
         

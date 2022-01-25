@@ -93,18 +93,16 @@ function DashboardContent() {
   const userLogin = useSelector((state) => state.userLogin);
   const userHours = useSelector((state) => state.userHours);
 
-  async function getHours() {
-    if (userLogin.id) {
-      // if (!userHours.hasOwnProperty("id")) {
+async function getHours() {
+  if (userLogin.id) {
+    // if (!userHours.hasOwnProperty("id")) {
       dispatch(getUserHoursById(userLogin.id))
-      // }
-    }
+    // }
   }
 
-  useEffect(() => {
-    getHours()
-    console.log("soy el useEffect")
-  }, [dispatch]);
+useEffect(() => {
+  getHours()
+}, [dispatch]);
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -187,7 +185,7 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-                  <VuelosTotales />
+                  <VuelosTotales count={userHours.totalFlights} key={3}/>
                 </Paper>
               </Grid>
               <Grid item xs={12} md={4} lg={3}>
@@ -199,7 +197,7 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-                  <HorasVuelosTotales />
+                  <HorasVuelosTotales hours={userHours.totalFlightHours} key={2}/>
                 </Paper>
               </Grid>
               <Grid item xs={12} md={4} lg={3}>
@@ -211,7 +209,7 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-                  <HorasVuelosMes />
+                  <HorasVuelosMes hours={userHours.flightHoursCurrentMonth} key={1}/>
                 </Paper>
               </Grid>
               <Grid item xs={12} md={4} lg={3}>

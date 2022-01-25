@@ -9,12 +9,12 @@ function preventDefault(event) {
 
 
 
-export default function HorasVuelosTotales() {
+export default function HorasVuelosTotales({hours}) {
   return (
     <React.Fragment>
       <Title>Hs. de vuelo totales</Title>
       <Typography component="p" variant="h4">
-        200.5
+        {hours}
       </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
         
