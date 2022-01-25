@@ -7,12 +7,12 @@ function preventDefault(event) {
   event.preventDefault();
 }
 
-export default function VuelosTotales() {
+export default function VuelosTotales({count}) {
   return (
     <React.Fragment>
       <Title>Vuelos totales</Title>
       <Typography component="p" variant="h4">
-        40
+        {count}
       </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
         
