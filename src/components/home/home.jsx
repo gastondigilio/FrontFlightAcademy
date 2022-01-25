@@ -90,8 +90,8 @@ const mdTheme = createTheme();
 
 function DashboardContent() {
   const dispatch = useDispatch();
-const userLogin = useSelector((state) => state.userLogin);
-const userHours = useSelector((state) => state.userHours);
+  const userLogin = useSelector((state) => state.userLogin);
+  const userHours = useSelector((state) => state.userHours);
 
 async function getHours() {
   if (userLogin.id) {
@@ -99,7 +99,6 @@ async function getHours() {
       dispatch(getUserHoursById(userLogin.id))
     // }
   }
-}
 
 useEffect(() => {
   getHours()
@@ -108,7 +107,6 @@ useEffect(() => {
   const toggleDrawer = () => {
     setOpen(!open);
   };
-  console.log("holaa")
   return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
@@ -123,7 +121,7 @@ useEffect(() => {
               edge="start"
               color="inherit"
               aria-label="open drawer"
-              onClick={toggleDrawer}
+              // onClick={toggleDrawer}
               sx={{
                 marginRight: '36px',
                 ...(open && { display: 'none' }),
@@ -141,9 +139,7 @@ useEffect(() => {
               Flight Academy
             </Typography>
             <IconButton color="inherit">
-              {/* <Badge badgeContent={4} color="secondary"> */}
               <AccountCircleIcon />
-              {/* </Badge> */}
             </IconButton>
           </Toolbar>
         </AppBar>
@@ -156,7 +152,7 @@ useEffect(() => {
               px: [1],
             }}
           >
-            <IconButton onClick={toggleDrawer}>
+            <IconButton >
               <ChevronLeftIcon />
             </IconButton>
           </Toolbar>
@@ -180,20 +176,6 @@ useEffect(() => {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              {/* Chart */}
-              {/* <Grid item xs={12} md={8} lg={12}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
-                  }}
-                >
-                  <Chart />
-                </Paper>
-              </Grid> */}
-              {/* Recent Deposits */}
               <Grid item xs={12} md={4} lg={3}>
                 <Paper
                   sx={{
@@ -242,7 +224,6 @@ useEffect(() => {
                   <ProximosTurnos />
                 </Paper>
               </Grid>
-              {/* Recent Orders */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   <Windy />
@@ -257,18 +238,6 @@ useEffect(() => {
             <Copyright sx={{ pt: 4 }} />
           </Container>
         </Box>
-        {/* <Grid item xs={12} md={8} lg={12}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
-                  }}
-                >
-                  <Windy />
-                </Paper>
-              </Grid> */}
       </Box>
       <Link href="/login">
         <button className='botonVolverLogin'>
