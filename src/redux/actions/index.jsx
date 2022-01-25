@@ -65,7 +65,7 @@ export const getUserHoursById = id => {
   console.log(id, "soy el id");
   return async dispatch => {
     try {
-      let res = await axios.get(`http://localhost:3001/hours/${id}`);
+      let res = await axios.get(`http://localhost:3001/hours?id=${id}`);
       console.log(res.data, "resoyesta")
       return dispatch({
         type: GET_USER_HOURS,
