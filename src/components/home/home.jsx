@@ -278,7 +278,3 @@ useEffect(() => {
     </ThemeProvider>
   );
 }
-
-// export default function Dashboard() {
-//   return <DashboardContent />;
-// }
