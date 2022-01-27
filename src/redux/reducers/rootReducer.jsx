@@ -1,13 +1,15 @@
 import {
   GET_ALL_USERS,
   GET_USER_LOGIN,
-  GET_USER_HOURS
+  GET_USER_HOURS,
+  GET_USER_TURNS
   } from "../actions/actionTypes";
   
   const initialState = {
     users: [],
     userLogin: [],
-    userHours: {}
+    userHours: {},
+    userTurns: []
   };
   
   export default function rootReducer(state = initialState, action) {
@@ -18,8 +20,8 @@ import {
           users: action.payload
         };
         case GET_USER_LOGIN:
-          console.log(action.payload, "payload reducersss")
-          console.log(state.userLogin, "stateeee")
+          // console.log(action.payload, "payload reducersss")
+          // console.log(state.userLogin, "stateeee")
           return {
             ...state,
             userLogin: action.payload
@@ -29,6 +31,11 @@ import {
             ...state,
             userHours: action.payload
           };
+          case GET_USER_TURNS:
+            return{
+              ...state,
+              userTurns: action.payload
+            };
       default:
         return state;
     }

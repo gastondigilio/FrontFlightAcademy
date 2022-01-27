@@ -2,7 +2,8 @@ import axios from "axios";
 import {
 GET_ALL_USERS,
 GET_USER_LOGIN,
-GET_USER_HOURS
+GET_USER_HOURS,
+GET_USER_TURNS
 } from "./actionTypes";
 
 export const getAllUsers = payload => {
@@ -72,6 +73,31 @@ export const getUserHoursById = id => {
 
         payload: res.data,
       });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const getUserTurnsById = id => {
+  return async dispatch => {
+    try {
+      let res = await axios.get(`http://localhost:3001/nextHours?userId=${id}`);
+      return dispatch({
+        type: GET_USER_TURNS,
+        payload: res.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const postUploadUserTurns = payload => {
+  return async () => {
+    try {
+      let res = await axios.post(`http://localhost:3001/nextHours/upload`, payload);
+      return res.data;
     } catch (error) {
       console.log(error);
     }

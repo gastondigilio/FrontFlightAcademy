@@ -17,6 +17,7 @@ import Galeria from './components/galeria/galeria';
 import PoliticaPrivacidad from './components/politicaPrivacidad/politicaPrivacidad';
 import PoliticaCookies from './components/politicaCookies/politicaCookies';
 import AvisoLegal from './components/avisoLegal/avisoLegal';
+import MisTurnos from './components/vuelos/misTurnos/misTurnos';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -42,6 +43,7 @@ function App() {
           <Route exact path='/aviso-legal' component={AvisoLegal} />
           <Route exact path="/perfil" component={Perfil} /> 
           <Route exact path="/register" component={Register} />
+          <Route exact path='/mis-turnos' component={MisTurnos} />
 
           {/* <Route path="/home" components={{main: Home, sidebar: Navbar}} /> */}
           {/* <Route exact path='/home' component={Navbar} /> */}
