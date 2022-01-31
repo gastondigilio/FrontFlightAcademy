@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React from "react";
 import Home from "./components/home/home";
 import Login from "./components/landing/login";
 import Perfil from "./components/perfil/perfil";
@@ -20,50 +19,55 @@ import AvisoLegal from './components/avisoLegal/avisoLegal';
 import MisTurnos from './components/vuelos/misTurnos/misTurnos';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className='App'>
-        <Switch>
-          <Route exact path='/' component={Landing} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path='/cursos' component={Cursos} />
-          <Route exact path='/cursos/piloto-privado' component={PilotoPrivado} />
-          <Route exact path='/cursos/piloto-comercial' component={PilotoComercial} />
-          <Route exact path='/cursos/piloto-comercial-primera-clase' component={PilotoComercialPrimera} />
-          <Route exact path='/cursos/instructor-vuelo' component={InstructorVuelo} />
-          <Route exact path='/cursos/instructor-simulador' component={InstructorSimulador} />
-          <Route exact path='/estudiantes' component={Estudiantes} />
-          <Route exact path='/sobre-nosotros' component={SobreNosotros} />
-          <Route exact path='/galeria' component={Galeria} />
-          <Route exact path='/politica-privacidad' component={PoliticaPrivacidad} />
-          <Route exact path='/politica-cookies' component={PoliticaCookies} />
-          <Route exact path='/aviso-legal' component={AvisoLegal} />
-          <Route exact path="/perfil" component={Perfil} /> 
-          <Route exact path="/register" component={Register} />
-          <Route exact path='/mis-turnos' component={MisTurnos} />
+    <div className='App'>
+      <BrowserRouter>
+       <Routes>
+            <Route path='/' element={<Landing/>} />
+            <Route path='/login' element={<Login/>} />
+            <Route path="/home" element={<Home/>} />
+            <Route path='/cursos' element={<Cursos/>} />
+            <Route path='/cursos/piloto-privado' element={<PilotoPrivado/>} />
+            <Route path='/cursos/piloto-comercial' element={<PilotoComercial/>} />
+            <Route path='/cursos/piloto-comercial-primera-clase' element={<PilotoComercialPrimera/>} />
+            <Route path='/cursos/instructor-vuelo' element={<InstructorVuelo/>} />
+            <Route path='/cursos/instructor-simulador' element={<InstructorSimulador/>} />
+            <Route path='/estudiantes' element={<Estudiantes/>} />
+            <Route path='/sobre-nosotros' element={<SobreNosotros/>} />
+            <Route path='/galeria' element={<Galeria/>} />
+            <Route path='/politica-privacidad' element={<PoliticaPrivacidad/>} />
+            <Route path='/politica-cookies' element={<PoliticaCookies/>} />
+            <Route path='/aviso-legal' element={<AvisoLegal/>} />
+            <Route path="/perfil" element={<Perfil/>} /> 
+            <Route path="/register" element={<Register/>} />
+            <Route path='/mis-turnos' element={<MisTurnos/>} />
 
-          {/* <Route path="/home" components={{main: Home, sidebar: Navbar}} /> */}
-          {/* <Route exact path='/home' component={Navbar} /> */}
-          {/* <Route path='/home'>
-          <Home currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        </Route>
-        <Route exact path='/detail/:id' component={Detail} />
-        <Route path='/carrito/:id' component={ShopingCart} />
-        <Route path='/favorites' component={Favorite} />
-        <Route path='/pago' component={GoShopping} />
-        <Route path='/perfil' component={Perfil} />
-        <Route path='/tarjeta' component={Pago} />
-        <Route path='/checkout' component={Checkuot} />
-        <Route path='/misCompras' component={MisCompras} />
-        <Route path='/realizado' component={Realizado} />
-        <Route path='/aboutUs' component={aboutUs} />
-        <Route path='*' component={DefaultError} /> */}
-        </Switch>
-      </div>
-    </BrowserRouter>
+            {/* <Route path="/home" components={{main: Home, sidebar: Navbar}} /> */}
+            {/* <Route path='/home' element={Navbar} /> */}
+            {/* <Route path='/home'>
+            <Home currentPage={currentPage} setCurrentPage={setCurrentPage} />
+          </Route>
+          <Route path='/detail/:id' element={Detail} />
+          <Route path='/carrito/:id' element={ShopingCart} />
+          <Route path='/favorites' element={Favorite} />
+          <Route path='/pago' element={GoShopping} />
+          <Route path='/perfil' element={Perfil} />
+          <Route path='/tarjeta' element={Pago} />
+          <Route path='/checkout' element={Checkuot} />
+          <Route path='/misCompras' element={MisCompras} />
+          <Route path='/realizado' element={Realizado} />
+          <Route path='/aboutUs' element={aboutUs} />
+          <Route path='*' element={DefaultError} /> */}
+       </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

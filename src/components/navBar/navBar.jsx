@@ -1,8 +1,8 @@
 import "./navBar.css";
 import React from "react";
-import { Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Nav, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText } from 'reactstrap';
+import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, /*NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText */} from 'reactstrap';
 import foto2 from '../../images/foto2.png'
-import Link from 'react-router-dom';
+//import Link from 'react-router-dom';
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -24,7 +24,7 @@ export default function NavBar() {
                 className="navContainer"
             >
                 <div className="navName">
-                    <img className="navImagen" src={foto2} />
+                    <img className="navImagen" alt='imagen de flight academy' src={foto2} />
                     <NavbarBrand href="/">
                         Flight academy
                     </NavbarBrand>

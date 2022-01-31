@@ -1,7 +1,6 @@
-
-import Navbar from "../navBar/navBar.jsx";
-import NavBarVertical from "../navBarVertical/navBarVertical";
-import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Button, CardText } from 'reactstrap';
+//import Navbar from "../navBar/navBar.jsx";
+//import NavBarVertical from "../navBarVertical/navBarVertical";
+//import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Button, CardText } from 'reactstrap';
 import "./perfil.css";
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
@@ -9,7 +8,7 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemIcon from '@mui/material/ListItemIcon';
+//import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';

@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../navBar/navBar';
 import Footer from '../footer/footer';
 import { Link } from 'react-router-dom';
-import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+import { Card, CardBody, CardTitle, /*CardSubtitle,*/ CardText } from 'reactstrap';
 import './sobreNosotros.css';
 
 export default function SobreNosotros() {

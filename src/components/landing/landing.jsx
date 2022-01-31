@@ -1,12 +1,8 @@
 import './landing.css'
 import React from 'react';
-import { InputGroup, Input, Button, Media, ButtonGroup, Carousel, CarouselIndicators, CarouselItem, CarouselCaption, CarouselControl, UncontrolledCarousel, Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
-import Login from './login';
+import { Button, Card, CardBody, CardSubtitle, CardText, /*Media, InputGroup, Input, ButtonGroup, Carousel, CarouselIndicators, CarouselItem, CarouselCaption, CarouselControl, UncontrolledCarousel, CardTitle, */} from 'reactstrap';
 import NavBar from '../navBar/navBar';
-import fotoModificada1 from '../../images/fotoModificada1.png';
-import foto2 from '../../images/foto2.png';
 import foto6 from '../../images/foto6.png';
-import ppa from '../../images/ppa.png';
 import pcia from '../../images/pcia.jpg';
 import pca from '../../images/pca.jpg';
 import iv from '../../images/iv.jpg'
@@ -24,7 +20,7 @@ export default function Landing() {
                             color="light"
                         >
                             <CardBody>
-                                <img src={foto6} className="imagenLanding" />
+                                <img src={foto6} className="imagenLanding" alt='imagen de landing'/>
                                 <CardSubtitle
                                     className="mb-2 text-muted"
                                     tag="h6"
@@ -43,7 +39,7 @@ export default function Landing() {
                             color="light"
                         >
                             <CardBody>
-                                <img src={pca} className="imagenLanding" />
+                                <img src={pca} className="imagenLanding"  alt='imagen de landing'/>
                                 <CardSubtitle
                                     className="mb-2 text-muted"
                                     tag="h6"
@@ -62,7 +58,7 @@ export default function Landing() {
                             color="light"
                         >
                             <CardBody>
-                                <img src={pcia}className="imagenLanding" />
+                                <img src={pcia}className="imagenLanding"  alt='imagen de landing'/>
                                 <CardSubtitle
                                     className="mb-2 text-muted"
                                     tag="h6"
@@ -81,7 +77,7 @@ export default function Landing() {
                             color="light"
                         >
                             <CardBody>
-                                <img src={iv} className="imagenLanding" />
+                                <img src={iv} className="imagenLanding"  alt='imagen de landing'/>
                                 <CardSubtitle
                                     className="mb-2 text-muted"
                                     tag="h6"
@@ -103,32 +99,3 @@ export default function Landing() {
         </div>
     )
 }
-{/* </div> */ }
-{/* <div className="images">
-<UncontrolledCarousel
-    items={[
-        {
-            
-            key: 1,
-            src: fotoModificada1
-        },
-        {
-            
-            key: 2,
-            src: foto2
-        },
-        {
-            
-            key: 3,
-            src: foto3
-        },
-        { 
-            key: 4,
-            src: foto4
-        }
-    ]}
-/>
-</div> */}
-{/* <div className="contenedorTitulo">
-<h4>Estoy volando...</h4>
-</div> */}

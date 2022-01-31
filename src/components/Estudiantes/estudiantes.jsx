@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../navBar/navBar';
-import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText /*, CardSubtitle */ } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Footer from '../footer/footer';
 import './estudiantes.css';
