@@ -1,7 +1,8 @@
 import './landing.css';
 import React, { useState } from 'react';
 import { loginUser } from '../../redux/actions/index.jsx';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import {useNavigate} from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import CssBaseline from '@mui/material/CssBaseline';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -15,8 +16,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import foto4 from '../../images/foto4.png';
 import foto6 from '../../images/foto6.png';
 import LoadingUser from './loadingUser'
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 
 function Copyright(props) {
   return (
@@ -39,9 +38,10 @@ export default function SignInSide() {
     pass: "",
     email: "",
   })
-
+  const navigate = useNavigate()
+  const userLogin = useSelector((state) => state.userLogin)
   const [islogin, setIslogin] = useState(false)
-
+ 
   const handleInputChange = function (e) {
     console.log(e.target.value)
     setInput({
@@ -55,11 +55,12 @@ export default function SignInSide() {
     if (input.email && input.pass) {
       dispatch(loginUser(input));
       setIslogin(true)
+      userLogin.hasOwnProperty("id") && navigate('/home')
     } else {
       alert("rellene los campos")
     }
   }
-
+  
   return (
     //   <div className="contenedorLogin">
     <div>
@@ -98,42 +99,42 @@ export default function SignInSide() {
               <Typography component="h1" variant="h5">
                 Flight Academy
               </Typography>
-              <Box component="form" noValidate onSubmit={e => handleSubmit(e)} sx={{ mt: 1 }}>
-                <TextField
-                  margin="normal"
+              <form onSubmit={e => (e)} sx={{ mt: 1 }}>
+                <input
+                  // margin="normal"
                   required
-                  fullWidth
-                  id="email"
+                  // fullWidth
+                  // id="email"
                   label="Email"
                   name="email"
-                  autoComplete="email"
+                  // autoComplete="email"
                   onChange={handleInputChange}
-                  autoFocus
+                // autoFocus
                 />
-                <TextField
-                  margin="normal"
+                <input
+                  // margin="normal"
                   required
-                  fullWidth
+                  // fullWidth
                   name="pass"
                   label="Contraseña"
                   type="password"
-                  id="pass"
+                  // id="pass"
                   onChange={handleInputChange}
-                  autoComplete="current-password"
+                // autoComplete="current-password"
                 />
                 <FormControlLabel
                   control={<Checkbox value="remember" color="primary" />}
                   label="Mantener sesión iniciada"
                 />
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
+                <button
+                  // type="submit"
+                  // fullWidth
+                  // variant="contained"
+                  // sx={{ mt: 3, mb: 2 }}
                   onClick={handleSubmit}
                 >
                   Iniciar sesion
-                </Button>
+                </button>
                 {
                   islogin? < LoadingUser status={islogin} key={input.email} setIslogin={setIslogin} /> : ''
                 }
@@ -154,7 +155,7 @@ export default function SignInSide() {
                   </Grid>
                 </Grid>
                 <Copyright sx={{ mt: 5 }} />
-              </Box>
+              </form>
             </Box>
           </Grid>
         </Grid>
