@@ -15,6 +15,7 @@ a:active {
 
 .footerName{
   text-align: justify;
+  margin: 2px;
 }
 
 .asdasd{
@@ -22,3 +23,24 @@ a:active {
   flex-direction: column;
   justify-content: flex-start;
 }
+
+.footerContainer{
+  border: solid 2px black
+
+}
+
+.footerContainer2{
+  border: solid 2px red;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2%;
+}
+
+.footerContainer3{
+  border: solid 2px green;
+  margin: 2px;
+  width:50%;
+}
+

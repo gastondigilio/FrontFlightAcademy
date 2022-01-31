@@ -11,7 +11,7 @@ import TwitterIcon from '../../images/TwitterIcon.png';
 
 export default function Footer() {
     return (
-        <div>
+        <div className="footerContainer">
             <footer sx={{ bgcolor: "yellow" }}>
                 <Box
                     px={{ xs: 3, sm: 10 }}
@@ -20,13 +20,13 @@ export default function Footer() {
                     color='white'
                     sx={{ bgcolor: "#4527a0" }}
                 >
-                    <Container maxWidth='lg'>
-                        <Grid container spacing={12}>
-                            <Grid item xs={9} sm={3} mt={5}>
-                                <div className='footerTitle'>
-                                    <Box>Flight Academy</Box>
-                                </div>
+                    <Container className="footerContainer">
+                        <Grid className="footerContainer2">
+                            <Grid className="footerContainer3">
                                 <div className='footerName'>
+                                    <div className='footerTitle'>
+                                        <Box>Flight Academy</Box>
+                                    </div>
                                     <Box mt={2} sm={10}>
                                         Escuela de Vuelo y servicios aéreos, Aeródromo de Morón (SADM / MOR), Buenos Aires, Argentina.
                                     </Box>
@@ -35,13 +35,17 @@ export default function Footer() {
                                     </Box>
                                 </div>
                             </Grid>
-                            <Grid item xs={9} sm={3} mt={5}>
+                            <Grid className="footerContainer3">
                                 <div className="footerTitle">
                                     <Box>Contacto</Box>
                                 </div>
                                 <Box mt={2}>
-                                    <img src={WhatsappIcon} width={20} />
-                                    +54 9 11 5481 2986
+                                    <div>
+                                        <img src={WhatsappIcon} width={20} />
+                                        <Link href="https://wa.me/5492213554594?text=Me%20interesa%20volar%20con%20ustedes,%20¿Me%20pasaría%20más%20información%20acerca%20de%20la%20escuela?" target="_blank">
+                                            +54 9 11 5481 2986
+                                        </Link>
+                                    </div>
                                 </Box>
                                 <Box mt={1}>
                                     <div className="footerPrueba">
@@ -52,7 +56,7 @@ export default function Footer() {
                                     </div>
                                 </Box>
                             </Grid>
-                            <Grid item xs={9} sm={3} mt={5}>
+                            <Grid className="footerContainer3">
                                 <div className="footerTitle">
                                     <Box>Más información</Box>
                                 </div>
@@ -72,17 +76,17 @@ export default function Footer() {
                                     </Link>
                                 </Box>
                                 <Box mt={1}>
-                                    <Link href='https://yovuelo.com.ar/' target='_blank'color='inherit'>
+                                    <Link href='https://yovuelo.com.ar/' target='_blank' color='inherit'>
                                         Yo vuelo
                                     </Link>
                                 </Box>
                                 <Box mt={1}>
-                                    <Link href='https://www.smn.gob.ar/' target='_blank'color='inherit'>
+                                    <Link href='https://www.smn.gob.ar/' target='_blank' color='inherit'>
                                         SMN
                                     </Link>
                                 </Box>
                             </Grid>
-                            <Grid item xs={9} sm={3} mt={5}>
+                            <Grid className="footerContainer3">
                                 <div className="footerTitle">
                                     <Box>Seguinos en</Box>
                                 </div>

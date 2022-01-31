@@ -16,6 +16,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import foto4 from '../../images/foto4.png';
 import foto6 from '../../images/foto6.png';
 import LoadingUser from './loadingUser'
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function Copyright(props) {
   return (
@@ -58,7 +60,7 @@ export default function SignInSide() {
       alert("rellene los campos")
     }
   }
-  
+
   return (
     //   <div className="contenedorLogin">
     <div>
@@ -97,44 +99,44 @@ export default function SignInSide() {
               <Typography component="h1" variant="h5">
                 Flight Academy
               </Typography>
-              <form onSubmit={e => (e)} sx={{ mt: 1 }}>
-                <input
-                  // margin="normal"
+              <Box component="form" noValidate onSubmit={e => handleSubmit(e)} sx={{ mt: 1 }}>
+                <TextField
+                  margin="normal"
                   required
-                  // fullWidth
-                  // id="email"
+                  fullWidth
+                  id="email"
                   label="Email"
                   name="email"
-                  // autoComplete="email"
+                  autoComplete="email"
                   onChange={handleInputChange}
-                // autoFocus
+                  autoFocus
                 />
-                <input
-                  // margin="normal"
+                <TextField
+                  margin="normal"
                   required
-                  // fullWidth
+                  fullWidth
                   name="pass"
                   label="Contraseña"
                   type="password"
-                  // id="pass"
+                  id="pass"
                   onChange={handleInputChange}
-                // autoComplete="current-password"
+                  autoComplete="current-password"
                 />
                 <FormControlLabel
                   control={<Checkbox value="remember" color="primary" />}
                   label="Mantener sesión iniciada"
                 />
-                <button
-                  // type="submit"
-                  // fullWidth
-                  // variant="contained"
-                  // sx={{ mt: 3, mb: 2 }}
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  sx={{ mt: 3, mb: 2 }}
                   onClick={handleSubmit}
                 >
                   Iniciar sesion
-                </button>
+                </Button>
                 {
-                  islogin? < LoadingUser status={islogin} key={input.email} setIslogin={setIslogin} /> : <h4></h4>
+                  islogin ? < LoadingUser status={islogin} key={input.email} setIslogin={setIslogin} /> : <h4></h4>
                 }
                 <Grid container>
                   <Grid item xs>
@@ -153,7 +155,7 @@ export default function SignInSide() {
                   </Grid>
                 </Grid>
                 <Copyright sx={{ mt: 5 }} />
-              </form>
+              </Box>
             </Box>
           </Grid>
         </Grid>
