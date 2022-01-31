@@ -1,6 +1,6 @@
 import "./navBar.css";
 import React from "react";
-import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, /*NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText */} from 'reactstrap';
+import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, /*NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText */ } from 'reactstrap';
 import foto2 from '../../images/foto2.png'
 //import Link from 'react-router-dom';
 
@@ -11,28 +11,27 @@ export default function NavBar() {
     return (
         <div>
             <div style={{
-            display: 'block', width: 400, marginTop: 50
-        }}>
-            <Navbar
-                color="dark"
-                container="fluid"
-                dark
-                expand="lg"
-                fixed="top"
-                bgcolor="black"
-                light
-                className="navContainer"
-            >
-                <div className="navName">
-                    <img className="navImagen" alt='imagen de flight academy' src={foto2} />
-                    <NavbarBrand href="/">
-                        Flight academy
-                    </NavbarBrand>
-                </div>
-                <NavbarToggler onClick={() => { setIsOpen(!isOpen) }} />
-                <div className="navBoton">
-                    <Collapse navbar container="fluid" isOpen={isOpen} >
-                        <Nav className="mr-auto" navbar>
+                display: 'block', width: 400, marginTop: 50
+            }}>
+                <Navbar
+                    color="dark"
+                    container="fluid"
+                    dark
+                    expand="lg"
+                    fixed="top"
+                    bgcolor="black"
+                    light
+                    className="navContainer"
+                >
+                    <div className="navName">
+                        <img className="navImagen" alt='imagen de flight academy' src={foto2} />
+                        <NavbarBrand href="/">
+                            Flight academy
+                        </NavbarBrand>
+                    </div>
+                    {/* <button onClick={() => { setIsOpen(!isOpen) }} /> */}
+                    <div className="navBoton">
+                        <div className="navBotonResponsive">
                             <NavbarBrand href="/sobre-nosotros">
                                 Sobre nosotros
                             </NavbarBrand>
@@ -48,10 +47,9 @@ export default function NavBar() {
                             <NavbarBrand href="/login">
                                 Turnos
                             </NavbarBrand>
-                        </Nav>
-                    </Collapse>
-                </div>
-            </Navbar>
+                        </div>
+                    </div>
+                </Navbar>
             </div>
         </div>
     )

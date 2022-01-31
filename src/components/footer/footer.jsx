@@ -21,8 +21,8 @@ export default function Footer() {
                     sx={{ bgcolor: "#4527a0" }}
                 >
                     <Container className="footerContainer">
-                        <Grid className="footerContainer2">
-                            <Grid className="footerContainer3">
+                        <div className="footerContainer2">
+                            <div className="footerContainer3">
                                 <div className='footerName'>
                                     <div className='footerTitle'>
                                         <Box>Flight Academy</Box>
@@ -34,8 +34,8 @@ export default function Footer() {
                                         Centro de Instrucción y Entrenamiento (CIAC) Tipo 3 certificado por ANAC.
                                     </Box>
                                 </div>
-                            </Grid>
-                            <Grid className="footerContainer3">
+                            </div>
+                            <div className="footerContainer3">
                                 <div className="footerTitle">
                                     <Box>Contacto</Box>
                                 </div>
@@ -55,8 +55,8 @@ export default function Footer() {
                                         </Link>
                                     </div>
                                 </Box>
-                            </Grid>
-                            <Grid className="footerContainer3">
+                            </div>
+                            <div className="footerContainer3">
                                 <div className="footerTitle">
                                     <Box>Más información</Box>
                                 </div>
@@ -85,26 +85,32 @@ export default function Footer() {
                                         SMN
                                     </Link>
                                 </Box>
-                            </Grid>
-                            <Grid className="footerContainer3">
+                            </div>
+                            <div className="footerContainer3">
                                 <div className="footerTitle">
                                     <Box>Seguinos en</Box>
                                 </div>
                                 <Box mt={2}>
                                     <div className="footerPrueba">
-                                        <Link href='https://www.instagram.com' target="_blank" color='inherit'>
-                                            <img src={InstagramIcon} width={25} />
-                                        </Link>
-                                        <Link href='https://www.facebook.com' target="_blank" color='inherit'>
-                                            <img src={FacebookIcon} width={25} />
-                                        </Link>
-                                        <Link href='https://www.twitter.com' target="_blank" color='inherit'>
-                                            <img src={TwitterIcon} width={25} />
-                                        </Link>
+                                        <div className="footerPrueba">
+                                            <Link href='https://www.instagram.com' target="_blank" color='inherit'>
+                                                <img src={InstagramIcon} width={25} />
+                                            </Link>
+                                        </div>
+                                        <div className="footerPrueba">
+                                            <Link href='https://www.facebook.com' target="_blank" color='inherit'>
+                                                <img src={FacebookIcon} width={25} />
+                                            </Link>
+                                        </div>
+                                        <div className="footerPrueba">
+                                            <Link href='https://www.twitter.com' target="_blank" color='inherit'>
+                                                <img src={TwitterIcon} width={25} />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </Box>
-                            </Grid>
-                        </Grid>
+                            </div>
+                        </div>
                         <Box textAlign='center' pt={{ xs: 5, sm: 5 }} pb={{ xs: 5, sm: 0 }}>
                             <Link href="/politica-privacidad" color="inherit">
                                 {' Política de privacidad |'}
