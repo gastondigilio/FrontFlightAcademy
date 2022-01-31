@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../navBar/navBar';
 import Footer from '../footer/footer';
-import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+import { Card, CardBody, CardTitle, /*CardSubtitle,*/ CardText } from 'reactstrap';
 import { Link } from 'react-router-dom'
 
 export default function PoliticaPrivacidad() {

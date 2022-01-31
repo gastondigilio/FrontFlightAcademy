@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+//  import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ListGroup, ListGroupItem } from "reactstrap";
 import ComponenteDashboard from '../../componenteDashboard/componenteDasboard';
 import './misTurnos.css'
 import TableTurn from './listGroup';
@@ -10,7 +9,7 @@ import { getUserTurnsById } from '../../../redux/actions/index';
 
 export default function MisTurnos() {
     const dispatch = useDispatch();
-    const history = useHistory();
+//  const navigate = useNavigate();
     const userLogin = useSelector((state) => state.userLogin);
     const userTurns = useSelector((state) => state.userTurns);
 

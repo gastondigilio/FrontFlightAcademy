@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { postCreateUser } from '../../redux/actions/index';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -32,7 +32,7 @@ const theme = createTheme();
 
 export default function Register() {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [input, setInput] = useState({
     name: "",
@@ -64,7 +64,7 @@ export default function Register() {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(postCreateUser(input));
-    history.push('/login');
+    navigate('/login');
     setInput({
       name: "",
       lastName: "",

@@ -1,8 +1,7 @@
 import './landing.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { loginUser } from '../../redux/actions/index.jsx';
-import { useHistory } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Avatar from '@mui/material/Avatar';
 import CssBaseline from '@mui/material/CssBaseline';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -91,7 +90,7 @@ export default function SignInSide() {
             >
               <Avatar sx={{ m: 1 }}>
                 {/* <LockOutlinedIcon /> */}
-                <img src={foto6} />
+                <img src={foto6} alt='Imagen de avatar'/>
                 {/* Foto avatar usuarios */}
               </Avatar>
               <Typography component="h1" variant="h5">
@@ -134,7 +133,7 @@ export default function SignInSide() {
                   Iniciar sesion
                 </button>
                 {
-                  islogin? < LoadingUser status={islogin} key={input.email} setIslogin={setIslogin} /> : <h4></h4>
+                  islogin? < LoadingUser status={islogin} key={input.email} setIslogin={setIslogin} /> : ''
                 }
                 <Grid container>
                   <Grid item xs>
