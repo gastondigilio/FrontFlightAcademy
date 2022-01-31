@@ -29,29 +29,29 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-       <Routes>
-            <Route path='/' element={<Landing/>} />
-            <Route path='/login' element={<Login/>} />
-            <Route path="/home" element={<Home/>} />
-            <Route path='/cursos' element={<Cursos/>} />
-            <Route path='/cursos/piloto-privado' element={<PilotoPrivado/>} />
-            <Route path='/cursos/piloto-comercial' element={<PilotoComercial/>} />
-            <Route path='/cursos/piloto-comercial-primera-clase' element={<PilotoComercialPrimera/>} />
-            <Route path='/cursos/instructor-vuelo' element={<InstructorVuelo/>} />
-            <Route path='/cursos/instructor-simulador' element={<InstructorSimulador/>} />
-            <Route path='/estudiantes' element={<Estudiantes/>} />
-            <Route path='/sobre-nosotros' element={<SobreNosotros/>} />
-            <Route path='/galeria' element={<Galeria/>} />
-            <Route path='/politica-privacidad' element={<PoliticaPrivacidad/>} />
-            <Route path='/politica-cookies' element={<PoliticaCookies/>} />
-            <Route path='/aviso-legal' element={<AvisoLegal/>} />
-            <Route path="/perfil" element={<Perfil/>} /> 
-            <Route path="/register" element={<Register/>} />
-            <Route path='/mis-turnos' element={<MisTurnos/>} />
+        <Routes>
+          <Route path='/' element={<Landing />} />
+          <Route path='/login' element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path='/cursos' element={<Cursos />} />
+          <Route path='/cursos/piloto-privado' element={<PilotoPrivado />} />
+          <Route path='/cursos/piloto-comercial' element={<PilotoComercial />} />
+          <Route path='/cursos/piloto-comercial-primera-clase' element={<PilotoComercialPrimera />} />
+          <Route path='/cursos/instructor-vuelo' element={<InstructorVuelo />} />
+          <Route path='/cursos/instructor-simulador' element={<InstructorSimulador />} />
+          <Route path='/estudiantes' element={<Estudiantes />} />
+          <Route path='/sobre-nosotros' element={<SobreNosotros />} />
+          <Route path='/galeria' element={<Galeria />} />
+          <Route path='/politica-privacidad' element={<PoliticaPrivacidad />} />
+          <Route path='/politica-cookies' element={<PoliticaCookies />} />
+          <Route path='/aviso-legal' element={<AvisoLegal />} />
+          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/register" element={<Register />} />
+          <Route path='/mis-turnos' element={<MisTurnos />} />
 
-            {/* <Route path="/home" components={{main: Home, sidebar: Navbar}} /> */}
-            {/* <Route path='/home' element={Navbar} /> */}
-            {/* <Route path='/home'>
+          {/* <Route path="/home" components={{main: Home, sidebar: Navbar}} /> */}
+          {/* <Route path='/home' element={Navbar} /> */}
+          {/* <Route path='/home'>
             <Home currentPage={currentPage} setCurrentPage={setCurrentPage} />
           </Route>
           <Route path='/detail/:id' element={Detail} />
@@ -65,7 +65,7 @@ function App() {
           <Route path='/realizado' element={Realizado} />
           <Route path='/aboutUs' element={aboutUs} />
           <Route path='*' element={DefaultError} /> */}
-       </Routes>
+        </Routes>
       </BrowserRouter>
     </div>
   );
