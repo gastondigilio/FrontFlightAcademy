@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 10%;
+    border: 3px solid red
 }
 
 .navBoton{
@@ -28,3 +29,27 @@
 .navImagen{
     width: 8%;
 }
+
+.navBotonResponsive{
+    display: flex;
+    border: 3px solid green
+}
+
+@media screen and (min-width : 200px) and (max-width : 780px) {
+    .navContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 280px;
+        margin: 0
+    }
+
+    .navBotonResponsive{
+        border: 3 px solid green;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 80px;
+    }
+  }
+  
