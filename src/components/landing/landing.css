@@ -70,7 +70,8 @@
 }
 
 .btnLogIn:hover{
-    text-decoration: underline
+    text-decoration: underline;
+    color: black
 }
 
 .logInContainer{
@@ -135,3 +136,63 @@
     position: relative;
     z-index: 1;
 } */
+
+@media screen and (min-width : 781px) and (max-width : 1450px) {
+    .cursosGrid{
+        margin-top: 100px;
+    }
+
+    .pruebaaa{
+        height: 320px;
+    }
+  }
+
+  @media screen and (min-width : 650px) and (max-width : 780px) {
+    .cursosGrid{
+        margin-top: 255px;
+    }
+
+    .pruebaaa{
+        height: 300px;
+    }
+  }
+
+  @media screen and (min-width : 510px) and (max-width : 650px) {
+    .cursosGrid{
+        margin-top: 255px;
+    }
+
+    .pruebaaa{
+        height: 350px;
+    }
+  }
+
+  @media screen and (min-width : 405px) and (max-width : 510px) {
+    .cursosGrid{
+        margin-top: 255px;
+    }
+
+    .pruebaaa{
+        height: 400px;
+    }
+  }
+
+  @media screen and (min-width : 355px) and (max-width : 405px) {
+    .cursosGrid{
+        margin-top: 255px;
+    }
+
+    .pruebaaa{
+        height: 450px;
+    }
+  }
+
+  @media screen and (min-width : 250px) and (max-width : 355px) {
+    .cursosGrid{
+        margin-top: 255px;
+    }
+
+    .pruebaaa{
+        height: 500px;
+    }
+  }

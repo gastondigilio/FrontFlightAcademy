@@ -2,7 +2,7 @@ import './landing.css';
 import React, { useState } from 'react';
 import { loginUser } from '../../redux/actions/index.jsx';
 import { useDispatch, useSelector } from 'react-redux';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import CssBaseline from '@mui/material/CssBaseline';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -15,7 +15,9 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import foto4 from '../../images/foto4.png';
 import foto6 from '../../images/foto6.png';
-import LoadingUser from './loadingUser'
+import LoadingUser from './loadingUser';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function Copyright(props) {
   return (
@@ -41,7 +43,7 @@ export default function SignInSide() {
   const navigate = useNavigate()
   const userLogin = useSelector((state) => state.userLogin)
   const [islogin, setIslogin] = useState(false)
- 
+
   const handleInputChange = function (e) {
     console.log(e.target.value)
     setInput({
@@ -60,7 +62,7 @@ export default function SignInSide() {
       alert("rellene los campos")
     }
   }
-  
+
   return (
     //   <div className="contenedorLogin">
     <div>
@@ -93,50 +95,49 @@ export default function SignInSide() {
             >
               <Avatar sx={{ m: 1 }}>
                 {/* <LockOutlinedIcon /> */}
-                <img src={foto6} alt='Imagen de avatar'/>
+                <img src={foto6} alt='Imagen de avatar' />
                 {/* Foto avatar usuarios */}
               </Avatar>
               <Typography component="h1" variant="h5">
                 Flight Academy
               </Typography>
-              <form onSubmit={e => (e)} sx={{ mt: 1 }}>
-                <input
-                  // margin="normal"
+              <Box component="form" noValidate onSubmit={e => handleSubmit(e)} sx={{ mt: 1 }}>
+                <TextField
+                  margin="normal"
                   required
-                  // fullWidth
-                  // id="email"
+                  fullWidth
+                  id="email"
                   label="Email"
                   name="email"
-                  // autoComplete="email"
+                  autoComplete="email"
                   onChange={handleInputChange}
-                // autoFocus
+                  autoFocus
                 />
-                <input
-                  // margin="normal"
+                <TextField
+                  margin="normal"
                   required
-                  // fullWidth
+                  fullWidth
                   name="pass"
                   label="Contraseña"
                   type="password"
-                  // id="pass"
+                  id="pass"
                   onChange={handleInputChange}
-                // autoComplete="current-password"
+                  autoComplete="current-password"
                 />
                 <FormControlLabel
                   control={<Checkbox value="remember" color="primary" />}
                   label="Mantener sesión iniciada"
                 />
-                <button
-                  // type="submit"
-                  // fullWidth
-                  // variant="contained"
-                  // sx={{ mt: 3, mb: 2 }}
-                  onClick={handleSubmit}
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  sx={{ mt: 3, mb: 2 }}
                 >
                   Iniciar sesion
-                </button>
+                </Button>
                 {
-                  islogin? < LoadingUser status={islogin} key={input.email} setIslogin={setIslogin} /> : ''
+                  islogin ? < LoadingUser status={islogin} key={input.email} setIslogin={setIslogin} /> : ''
                 }
                 <Grid container>
                   <Grid item xs>
@@ -155,7 +156,7 @@ export default function SignInSide() {
                   </Grid>
                 </Grid>
                 <Copyright sx={{ mt: 5 }} />
-              </form>
+              </Box>
             </Box>
           </Grid>
         </Grid>

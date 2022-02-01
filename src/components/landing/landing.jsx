@@ -19,7 +19,7 @@ export default function Landing() {
                         <Card
                             color="light"
                         >
-                            <CardBody>
+                            <CardBody className="pruebaaa">
                                 <img src={foto6} className="imagenLanding" alt='imagen de landing'/>
                                 <CardSubtitle
                                     className="mb-2 text-muted"
@@ -38,7 +38,7 @@ export default function Landing() {
                         <Card
                             color="light"
                         >
-                            <CardBody>
+                            <CardBody className="pruebaaa">
                                 <img src={pca} className="imagenLanding"  alt='imagen de landing'/>
                                 <CardSubtitle
                                     className="mb-2 text-muted"
@@ -57,7 +57,7 @@ export default function Landing() {
                         <Card
                             color="light"
                         >
-                            <CardBody>
+                            <CardBody className="pruebaaa">
                                 <img src={pcia}className="imagenLanding"  alt='imagen de landing'/>
                                 <CardSubtitle
                                     className="mb-2 text-muted"
@@ -76,7 +76,7 @@ export default function Landing() {
                         <Card
                             color="light"
                         >
-                            <CardBody>
+                            <CardBody className="pruebaaa">
                                 <img src={iv} className="imagenLanding"  alt='imagen de landing'/>
                                 <CardSubtitle
                                     className="mb-2 text-muted"

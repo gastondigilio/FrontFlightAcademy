@@ -41,14 +41,16 @@ export default function Footer() {
                                 </div>
                                 <Box mt={2}>
                                     <div>
-                                        <img src={WhatsappIcon} width={20} />
-                                        <Link href="https://wa.me/5492213554594?text=Me%20interesa%20volar%20con%20ustedes,%20¿Me%20pasaría%20más%20información%20acerca%20de%20la%20escuela?" target="_blank">
-                                            +54 9 11 5481 2986
-                                        </Link>
+                                        <div className="btnLogin">
+                                            <img src={WhatsappIcon} width={20} />
+                                            <Link href="https://wa.me/5492213554594?text=Me%20interesa%20volar%20con%20ustedes,%20¿Me%20pasaría%20más%20información%20acerca%20de%20la%20escuela?" target="_blank">
+                                                +54 9 11 5481 2986
+                                            </Link>
+                                        </div>
                                     </div>
                                 </Box>
                                 <Box mt={1}>
-                                    <div className="footerPrueba">
+                                    <div>
                                         < MailOutlineIcon />
                                         <Link href='mailto:gastondigilio@gmail.com' color='inherit'>
                                             gastondigilio@gmail.com
