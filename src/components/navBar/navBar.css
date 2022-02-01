@@ -32,7 +32,6 @@
 
 .navBotonResponsive{
     display: flex;
-    border: 3px solid green
 }
 
 @media screen and (min-width : 200px) and (max-width : 780px) {
@@ -40,12 +39,11 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 280px;
+        height: 240px;
         margin: 0
     }
 
     .navBotonResponsive{
-        border: 3 px solid green;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
