@@ -17,6 +17,9 @@ import PoliticaPrivacidad from './components/politicaPrivacidad/politicaPrivacid
 import PoliticaCookies from './components/politicaCookies/politicaCookies';
 import AvisoLegal from './components/avisoLegal/avisoLegal';
 import MisTurnos from './components/vuelos/misTurnos/misTurnos';
+import HomeAdmin from './components/admin/homeAdmin/homeAdmin';
+import AgregarAeronave from './components/admin/aeronaves/agregarAeronave/agregarAeronave';
+import EliminarAeronave from './components/admin/aeronaves/eliminarAeronave/eliminarAeronave'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
@@ -30,6 +33,9 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <Routes>
+          <Route path='/home-admin' element={<HomeAdmin />} />
+          <Route path='/agregar-aeronave' element={<AgregarAeronave />} />
+          <Route path='/eliminar-aeronave' element={<EliminarAeronave/>} />
           <Route path='/' element={<Landing />} />
           <Route path='/login' element={<Login />} />
           <Route path="/home" element={<Home />} />
