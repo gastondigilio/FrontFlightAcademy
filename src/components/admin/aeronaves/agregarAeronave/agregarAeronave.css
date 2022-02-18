@@ -1,0 +1,88 @@
+.agregarAeronaveContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 0;
+    border-radius: 10px;
+    width: 40%;
+    height: 55vh;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 44px;
+    background: #e0e0e0;
+    box-shadow: -10px 10px 16px #c3c3c3, 10px -10px 16px #fdfdfd;
+    border: 2px solid rgb(53, 134, 226);
+  }
+
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+  }
+  
+  .form-inputs input {
+    background: rgb(236, 236, 236);
+    color: black;
+    width: 90%;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  .form-inputs textarea {
+    background: rgb(236, 236, 236);
+    color: white;
+    width: 90%;
+    height: 40px;
+    border: 1px solid rgb(248, 237, 237);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    resize: none;
+  }
+  
+  .botonAdmin {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: solid;
+    border-radius: 50px;
+    color: black;
+    background-color: white;
+  }
+  
+  .botonAdmin:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .btn {
+    background: rgba(0, 0, 0, 0);
+    color: rgb(0, 140, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(0, 140, 255);
+    margin: auto;
+    margin-top: 20px;;
+  }
+  
+  .btn:hover {
+    border: 1px solid rgb(2, 81, 146);
+    color: rgb(0, 140, 255);
+  }
+
+  /* .separadorDivs{
+      margin-bottom:10%;
+  } */
+
+  .probando{
+      margin-top: 20px;
+  }
