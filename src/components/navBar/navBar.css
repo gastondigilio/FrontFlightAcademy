@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 10%;
+    border: 3px solid red
 }
 
 .navBoton{

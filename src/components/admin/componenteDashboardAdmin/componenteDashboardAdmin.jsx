@@ -15,9 +15,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { mainListItems, secondaryListItems } from '../home/listItems';
 
-export default function ComponenteDashboard() {
+export default function ComponenteDashboardAdmin() {
     const drawerWidth = 240;
-
+//asdsaddsa
     const AppBar = styled(MuiAppBar, {
         shouldForwardProp: (prop) => prop !== 'open',
     })(({ theme, open }) => ({

@@ -13,9 +13,13 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import { mainListItems, secondaryListItems } from '../home/listItems';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import { mainListItems, secondaryListItems } from '../../home/listItems';
+import Aeronaves from '../aeronaves/aeronaves'
 
-export default function ComponenteDashboard() {
+export default function HomeAdmin() {
     const drawerWidth = 240;
 
     const AppBar = styled(MuiAppBar, {
@@ -98,7 +102,7 @@ export default function ComponenteDashboard() {
                             noWrap
                             sx={{ flexGrow: 1 }}
                         >
-                            Flight Academy
+                            Flight Academy - Panel Administrador
                         </Typography>
                         <IconButton color="inherit">
                             {/* <Badge badgeContent={4} color="secondary"> */}
@@ -125,6 +129,92 @@ export default function ComponenteDashboard() {
                     <Divider />
                     <List>{secondaryListItems}</List>
                 </Drawer>
+                <Box
+                    component="main"
+                    sx={{
+                        backgroundColor: (theme) =>
+                            theme.palette.mode === 'light'
+                                ? theme.palette.grey[100]
+                                : theme.palette.grey[900],
+                        flexGrow: 1,
+                        height: '100vh',
+                        overflow: 'auto',
+                    }}
+                >
+                    <Toolbar />
+                    <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+                        <Grid container spacing={3}>
+                            {/* Chart */}
+                            {/* <Grid item xs={12} md={8} lg={12}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 240,
+                  }}
+                >
+                  <Chart />
+                </Paper>
+              </Grid> */}
+                            {/* Recent Deposits */}
+                            <Grid item xs={12} md={4} lg={3}>
+                                <Paper
+                                    sx={{
+                                        p: 2,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        height: 240,
+                                    }}
+                                >
+                                    <Aeronaves />
+                                </Paper>
+                            </Grid>
+                            <Grid item xs={12} md={4} lg={3}>
+                                <Paper
+                                    sx={{
+                                        p: 2,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        height: 240,
+                                    }}
+                                >
+                                </Paper>
+                            </Grid>
+                            <Grid item xs={12} md={4} lg={3}>
+                                <Paper
+                                    sx={{
+                                        p: 2,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        height: 240,
+                                    }}
+                                >
+                                </Paper>
+                            </Grid>
+                            <Grid item xs={12} md={4} lg={3}>
+                                <Paper
+                                    sx={{
+                                        p: 2,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        height: 240,
+                                    }}
+                                >
+                                </Paper>
+                            </Grid>
+                            {/* Recent Orders */}
+                            <Grid item xs={12}>
+                                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                                </Paper>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                                </Paper>
+                            </Grid>
+                        </Grid>
+                    </Container>
+                </Box>
                 <Link href="/login">
                     <button className='botonVolverLogin'>
                         Salir
