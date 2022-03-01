@@ -1,12 +1,13 @@
 .containerGaleria{
-    margin-top:4.7%;
+    padding: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: rgb(3, 9, 14);
 }
 
 .containerCarousel{
-    width: 75%;
-    /* height: 80%; */
+    width: 100%;
+    height: auto;
 }

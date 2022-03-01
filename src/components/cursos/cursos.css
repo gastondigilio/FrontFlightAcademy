@@ -1,16 +1,26 @@
-.cursosContainerTotal{
-    /* margin: top 5%; */
-    /* border: 1px solid rgb(0, 140, 255); */
+.cursosContainerTotal1{
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
-
 .ContainerCursos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%; 
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  justify-items: center;
+  margin: 5%
+  
 }
-
+.curso-card{
+  background-color: rgb(240, 236, 236);
+  width: 40vw !important;
+  margin: 2%;
+  height:auto;
+  box-shadow: -10px 10px 16px rgb(0 0 0 / 30%);
+  border-radius: 2%;
+  
+}
   
   .detailContainer2 {
     display: flex;
@@ -30,8 +40,7 @@
   .detailSummary {
     text-align: justify;
     color: #111;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 100%;
     padding: 10px;
   }
 /*   
@@ -50,13 +59,14 @@
   .divCursos{
     display: flex;
     flex-direction: row;
+    margin: 2%
   }
 
   .divCursos2{
     display: flex;
     flex-direction: column;
     padding-left: 2%;
-    padding-right: 2%;
+    align-items: center;
   }
   
   .detailContainerCard2 {
@@ -107,3 +117,37 @@
     justify-content: space-between;
     
   }
+
+
+  @media screen and (min-width : 600px) and (max-width : 1150px){
+   .divCursos{
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center  !important;
+      margin: 2%;
+    }
+    .imagenCursos{
+      width: 98% !important;
+    }
+
+  }
+
+  @media screen and (min-width : 200px) and (max-width : 600px){
+
+    .curso-card{
+      width: 90vw !important;
+    }
+    .divCursos{
+       display: flex !important;
+       flex-direction: column !important;
+       align-items: center  !important;
+       margin: 2%;
+     }
+     .imagenCursos{
+       width: 98% !important;
+     }
+     .ContainerCursos{
+        grid-template-columns: auto
+     }
+
+   }

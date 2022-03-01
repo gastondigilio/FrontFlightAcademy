@@ -1,12 +1,4 @@
-.contenedorLanding{
-    margin-top: 55px;
-    /* border: 5px solid blue; */
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center; */
-    /* z-index: 100; */
-}
+
 
 .images{
     /* height:-3%; */
@@ -70,7 +62,8 @@
 }
 
 .btnLogIn:hover{
-    text-decoration: underline
+    text-decoration: underline;
+    color: black
 }
 
 .logInContainer{
@@ -85,10 +78,11 @@
 }
 
 .imagenLanding{
-    width: 30%;
-    /* height: 50%; */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border-radius: 15px;
-    margin-bottom: 2%;
+    margin: 2%;
 }
 
 
@@ -125,6 +119,17 @@
     color: black;
     background-color: white;
   }
+  html, body {
+   
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .contenedorLanding{
+      width: 100%;
+      height: 100%;
+    
+  }
   
   .botonVolverLogin:hover {
     background-color: black;
@@ -135,3 +140,20 @@
     position: relative;
     z-index: 1;
 } */
+
+@media screen and (min-width : 781px) and (max-width : 1450px) {
+ 
+
+  
+  }
+
+ 
+
+  @media screen and (min-width : 200px) and (max-width : 650px) {
+    
+.containerCursosGrid{
+    grid-template-columns: auto;
+}
+    
+  }
+
