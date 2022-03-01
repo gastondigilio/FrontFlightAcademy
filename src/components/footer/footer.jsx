@@ -35,7 +35,7 @@ export default function Footer() {
                                     </Box>
                                 </div>
                             </div>
-                            <div className="footerContainer3">
+                        {/*     <div className="footerContainer3">
                                 <div className="footerTitle">
                                     <Box>Contacto</Box>
                                 </div>
@@ -57,7 +57,7 @@ export default function Footer() {
                                         </Link>
                                     </div>
                                 </Box>
-                            </div>
+                            </div> */}
                             <div className="footerContainer3">
                                 <div className="footerTitle">
                                     <Box>Más información</Box>
