@@ -148,11 +148,11 @@ export default function SignInSide() {
                     </Link>
                   </Grid>
                   <Grid item>
-                  {/*   <Link href="/register" variant="body2" style={{ textDecoration: 'none' }}>
+                    <Link href="/register" variant="body2" style={{ textDecoration: 'none' }}>
                       <div className="btnLogIn">
                         {"Registrarse"}
                       </div>
-                    </Link> */}
+                    </Link>s
                   </Grid>
                 </Grid>
                 <Copyright sx={{ mt: 5 }} />
